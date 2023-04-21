@@ -6,13 +6,14 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Ninja : MonoBehaviour
 {
     [SerializeField] private float velocity;
-    private Rigidbody2D rb;
+    private Vector3 movement;
+    private Rigidbody2D ninjaRigidBody;
     private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        ninjaRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -20,40 +21,57 @@ public class Ninja : MonoBehaviour
     void Update()
     {
         MovementProcess();
-
-    }
-    private void FixedUpdate() {
     }
 
     void MovementProcess() {
-        Vector3 movement = Vector3.zero;
-        float inputHorizontal = Input.GetAxis("Horizontal");
-        float inputVertical = Input.GetAxis("Vertical");
+        movement = Vector3.zero;
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        if (inputHorizontal > 0) {
+        if(movement != Vector3.zero) {
+            ninjaRigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
+            animator.SetFloat("moveX", movement.x);
+            animator.SetFloat("moveY", movement.y);
+            animator.SetBool("isWalking", true);
+        }
+        else {
+            animator.SetBool("isWalking", false);
+        }
+
+        /*CODI ANTERIOR
+        //ninjaRigidBody.velocity = new Vector2(movement.x * velocity, movement.y * velocity);
+        //ninjaRigidBody.velocity.Normalize();
+
+
+        animator.SetFloat("moveX", movement.x);
+        animator.SetFloat("moveY", movement.y);
+        animator.SetBool("isWalking", true);
+        
+
+        if (movement.x > 0) {
             //movement += Vector3.right;
             animator.SetBool("isRunningRight", true);
         }
         else { animator.SetBool("isRunningRight", false); }
             
-        if (inputHorizontal < 0) {
+        if (movement.x < 0) {
             //movement += Vector3.left;
             animator.SetBool("isRunningLeft", true);
         }
         else { animator.SetBool("isRunningLeft", false); }
 
-        if (inputVertical > 0) {
+        if (movement.y > 0) {
             //movement += Vector3.up;
             animator.SetBool("isRunningUp", true);
         }else { animator.SetBool("isRunningUp", false); }
 
-        if (inputVertical < 0) {
+        if (movement.y < 0) {
             //movement += Vector3.down;
             animator.SetBool("isRunningDown", true);
         }else {animator.SetBool("isRunningDown", false); }
-        rb.velocity = new Vector2(inputHorizontal * velocity, inputVertical * velocity);
-        movement.Normalize();
+
+        //movement.Normalize();
         //transform.position += movement * Time.deltaTime;
-        //rb.velocity.Normalize();
+        */
     }
 }
