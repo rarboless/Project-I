@@ -29,7 +29,9 @@ public class Ninja : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         if(movement != Vector3.zero) {
-            ninjaRigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
+            ninjaRigidBody.MovePosition(transform.position + movement * velocity);
+            //Amb vSync Activat
+            //ninjaRigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
             animator.SetBool("isWalking", true);
