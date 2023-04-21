@@ -20,6 +20,9 @@ public class Ninja : MonoBehaviour
     void Update()
     {
         MovementProcess();
+
+    }
+    private void FixedUpdate() {
     }
 
     void MovementProcess() {
@@ -27,34 +30,30 @@ public class Ninja : MonoBehaviour
         float inputHorizontal = Input.GetAxis("Horizontal");
         float inputVertical = Input.GetAxis("Vertical");
 
-        rb.velocity = new Vector2(inputHorizontal * velocity, inputVertical * velocity);
-
         if (inputHorizontal > 0) {
             //movement += Vector3.right;
             animator.SetBool("isRunningRight", true);
         }
-        else if (inputHorizontal < 0) {
+        else { animator.SetBool("isRunningRight", false); }
+            
+        if (inputHorizontal < 0) {
             //movement += Vector3.left;
             animator.SetBool("isRunningLeft", true);
         }
-        else if (inputVertical > 0) {
+        else { animator.SetBool("isRunningLeft", false); }
+
+        if (inputVertical > 0) {
             //movement += Vector3.up;
             animator.SetBool("isRunningUp", true);
-        }
-        else if (inputVertical < 0) {
+        }else { animator.SetBool("isRunningUp", false); }
+
+        if (inputVertical < 0) {
             //movement += Vector3.down;
             animator.SetBool("isRunningDown", true);
-        }
-        else {
-            animator.SetBool("isRunningDown", false);
-            animator.SetBool("isRunningUp", false);
-            animator.SetBool("isRunningLeft", false);
-            animator.SetBool("isRunningRight", false);
-        }
+        }else {animator.SetBool("isRunningDown", false); }
         rb.velocity = new Vector2(inputHorizontal * velocity, inputVertical * velocity);
-
-        //movement.Normalize();
+        movement.Normalize();
+        //transform.position += movement * Time.deltaTime;
         rb.velocity.Normalize();
     }
-    
 }
