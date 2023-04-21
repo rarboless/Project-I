@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Ninja : MonoBehaviour
 {
@@ -13,8 +14,6 @@ public class Ninja : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-
     }
 
     // Update is called once per frame
@@ -54,25 +53,8 @@ public class Ninja : MonoBehaviour
         }
         rb.velocity = new Vector2(inputHorizontal * velocity, inputVertical * velocity);
 
-
-        movement.Normalize();
-
-        //Orientation();
-        //rb.velocity.Normalize();
+        //movement.Normalize();
+        rb.velocity.Normalize();
     }
-
-    void Orientation() {
-        if(Input.GetAxis("Horizontal") > 0) {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-        if(Input.GetAxis("Horizontal") < 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        if (Input.GetAxis("Vertical") > 0) {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-        if (Input.GetAxis("Vertical") < 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-    }
+    
 }
