@@ -54,6 +54,6 @@ public class Ninja : MonoBehaviour
         rb.velocity = new Vector2(inputHorizontal * velocity, inputVertical * velocity);
         movement.Normalize();
         //transform.position += movement * Time.deltaTime;
-        rb.velocity.Normalize();
+        //rb.velocity.Normalize();
     }
 }
