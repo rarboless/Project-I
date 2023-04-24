@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6946ca67150234db9cfba0e0cbe225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 2
+  sceneBuildIndex: 1
   img: {fileID: 1315962543}
   fadeCurve:
     serializedVersion: 2
@@ -1762,7 +1762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932599106}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5695052, y: 2.8920648, z: -9.822619}
+  m_LocalPosition: {x: 1.5400882, y: 1.6637611, z: -9.822619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1972,7 +1972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012647186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.538, y: 0.283, z: 0}
+  m_LocalPosition: {x: 4.51, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2231,7 +2231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436463230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5695052, y: 2.8920648, z: -9.822619}
+  m_LocalPosition: {x: 1.5415053, y: -0.9609351, z: -9.822619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
