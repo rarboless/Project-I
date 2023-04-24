@@ -18,9 +18,13 @@ public class Ninja : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MovementProcess();
+    }
+
+    private void Update() {
+            
     }
 
     void MovementProcess() {
@@ -29,9 +33,7 @@ public class Ninja : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         if(movement != Vector3.zero) {
-            rigidBody.MovePosition(transform.position + movement * velocity);
-            //Amb vSync Activat
-            //ninjaRigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
+            rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
