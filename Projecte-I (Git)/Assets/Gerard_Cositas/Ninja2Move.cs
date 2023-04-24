@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Ninja2Move : MonoBehaviour {
     [SerializeField] private float velocity;
+    [SerializeField] private GameObject firePoint;
+    [SerializeField] private GameObject bullet;
 
     private Rigidbody2D ninjaRigidBody;
     private Animator animator;
@@ -17,6 +19,10 @@ public class Ninja2Move : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         MovementProcess();
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            Shoot();
+        }
     }
 
     void MovementProcess() {
@@ -35,5 +41,18 @@ public class Ninja2Move : MonoBehaviour {
         else {
             animator.SetBool("isWalking", false);
         }
+    }
+
+    void Shoot() {
+        Vector3 v3;
+        if (transform.localScale.x == 1.0f) {
+            v3 = Vector3.right;
+        }
+        else {
+            v3 = Vector3.left;
+        }
+
+        GameObject bala = Instantiate(bullet, transform.position + v3 * 0.2f, transform.rotation);
+        Destroy(bala, 5f);
     }
 }
