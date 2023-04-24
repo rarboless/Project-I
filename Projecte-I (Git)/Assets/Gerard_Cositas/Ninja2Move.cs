@@ -20,7 +20,7 @@ public class Ninja2Move : MonoBehaviour {
     void Update() {
         MovementProcess();
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetMouseButtonDown(0)) {
             Shoot();
         }
     }
