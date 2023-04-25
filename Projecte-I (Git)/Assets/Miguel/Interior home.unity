@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 681646095}
   - component: {fileID: 681646094}
   m_Layer: 0
-  m_Name: ChangeSceneTest
+  m_Name: ExteriorChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

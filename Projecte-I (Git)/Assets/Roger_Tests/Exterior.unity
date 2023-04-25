@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 614782479}
   - component: {fileID: 614782478}
   m_Layer: 0
-  m_Name: ChangeSceneTest
+  m_Name: SnowChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -8636,7 +8636,7 @@ GameObject:
   - component: {fileID: 1055618005}
   - component: {fileID: 1055618004}
   m_Layer: 0
-  m_Name: ChangeSceneTest (1)
+  m_Name: HouseChangeScene
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
