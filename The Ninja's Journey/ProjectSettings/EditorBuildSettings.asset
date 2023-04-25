@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/Exterior.unity
+    guid: 0c2e98ff00bb86442b7b97b044eff21c
+  - enabled: 1
+    path: Assets/_Scenes/SnowExterior.unity
+    guid: 990ba46ca9513d74694a36f67d527225
+  - enabled: 1
+    path: Assets/_Scenes/InteriorHome.unity
+    guid: a5ca6372f8172904a84b5678b19125f8
+  m_configObjects: {}
