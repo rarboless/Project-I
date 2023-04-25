@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Ninja : MonoBehaviour
@@ -9,6 +10,10 @@ public class Ninja : MonoBehaviour
     private Vector3 movement;
     private Rigidbody2D rigidBody;
     private Animator animator;
+
+    [SerializeField] private float shakeIntensity;
+    [SerializeField] private float shakeFrequency;
+    [SerializeField] private float shakeTime;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +29,7 @@ public class Ninja : MonoBehaviour
     }
 
     private void Update() {
-            
+
     }
 
     void MovementProcess() {
@@ -41,6 +46,10 @@ public class Ninja : MonoBehaviour
         }
         else {
             animator.SetBool("isWalking", false);
+        }
+
+        if (Input.GetMouseButtonDown(0)) {
+            CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }
     }
 }
