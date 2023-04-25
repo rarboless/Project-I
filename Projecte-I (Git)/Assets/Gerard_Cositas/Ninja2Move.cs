@@ -7,6 +7,8 @@ public class Ninja2Move : MonoBehaviour {
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject bullet;
 
+    [SerializeField] private InputScript input;
+
     private Rigidbody2D ninjaRigidBody;
     private Animator animator;
 
@@ -28,9 +30,7 @@ public class Ninja2Move : MonoBehaviour {
     void MovementProcess() {
         Vector3 movement;
 
-        movement = Vector3.zero;
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement = input.InputDetect();
 
         if (movement != Vector3.zero) {
             ninjaRigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);

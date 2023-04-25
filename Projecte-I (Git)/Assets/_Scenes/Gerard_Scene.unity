@@ -7787,6 +7787,7 @@ GameObject:
   - component: {fileID: 1386286360}
   - component: {fileID: 1386286358}
   - component: {fileID: 1386286364}
+  - component: {fileID: 1386286365}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Player
@@ -7945,6 +7946,19 @@ MonoBehaviour:
   velocity: 5
   firePoint: {fileID: 644116195}
   bullet: {fileID: 7214729246008007261, guid: 3c84c8c2841059a4195a3410b4b66c25, type: 3}
+  input: {fileID: 1386286365}
+--- !u!114 &1386286365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386286357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9678af34a8bb1de468afbe0b28331a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1702026298
 GameObject:
   m_ObjectHideFlags: 0
