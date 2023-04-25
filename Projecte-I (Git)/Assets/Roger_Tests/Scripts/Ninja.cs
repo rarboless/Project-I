@@ -15,6 +15,7 @@ public class Ninja : MonoBehaviour
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
+    private Vector3 SpawnCasa;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,4 +51,13 @@ public class Ninja : MonoBehaviour
             CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }
     }
-}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.tag == "Checkpoint")
+        {
+            transform.position = SpawnCasa;
+        }
+    }
+ }
