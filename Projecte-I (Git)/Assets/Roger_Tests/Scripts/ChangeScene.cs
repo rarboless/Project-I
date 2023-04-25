@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour {
-    // Start is called before the first frame update
     public int sceneBuildIndex;
 
     [SerializeField] private RawImage img;
@@ -29,9 +28,6 @@ public class ChangeScene : MonoBehaviour {
             float a = fadeCurve.Evaluate(t);
 
             t = t - Time.deltaTime;
-
-            //For raw images this must be done to change their alpha
-            //Per les raw images s'ha de fer això per canviar el seu alpha
             Color color = img.color;
             color.a = a;
             img.color = color;
