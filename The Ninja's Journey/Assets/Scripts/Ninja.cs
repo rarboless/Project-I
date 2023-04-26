@@ -36,6 +36,15 @@ public class Ninja : MonoBehaviour
         if(movement != Vector3.zero) {
             rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
 
+            /*if (movement.x != 0 && movement.y != 0)
+            {
+                rigidBody.MovePosition(transform.position + movement * (velocity / 2) * Time.deltaTime);
+            }
+            else
+            {
+                rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
+            }*/
+
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
             animator.SetBool("isWalking", true);
