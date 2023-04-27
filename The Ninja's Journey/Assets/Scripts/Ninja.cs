@@ -16,6 +16,10 @@ public class Ninja : MonoBehaviour
     [SerializeField] private float shakeIntensity;
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
+
+    void Awake() {
+        DontDestroyOnLoad(transform.gameObject);
+    }
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
