@@ -359,6 +359,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  spawnPoint: {fileID: 0}
 --- !u!61 &614782479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8698,6 +8699,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  spawnPoint: {fileID: 0}
 --- !u!61 &1055618005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8754,7 +8756,8 @@ GameObject:
   - component: {fileID: 1386286360}
   - component: {fileID: 1386286358}
   - component: {fileID: 1386286365}
-  - component: {fileID: 1386286364}
+  - component: {fileID: 1386286367}
+  - component: {fileID: 1386286366}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Player
@@ -8898,23 +8901,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1386286364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386286357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df003c6efc6a02448bcc0430e86319ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 5
-  inputScript: {fileID: 1386286365}
-  shakeIntensity: 5
-  shakeFrequency: 5
-  shakeTime: 0.5
 --- !u!114 &1386286365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8927,6 +8913,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9678af34a8bb1de468afbe0b28331a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1386286366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386286357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9678af34a8bb1de468afbe0b28331a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1386286367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386286357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd11fbec013008c49ab25e4c690142a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 5
+  inputScript: {fileID: 1386286366}
+  shakeIntensity: 5
+  shakeFrequency: 5
+  shakeTime: 0.5
 --- !u!1 &1427546928
 GameObject:
   m_ObjectHideFlags: 0
