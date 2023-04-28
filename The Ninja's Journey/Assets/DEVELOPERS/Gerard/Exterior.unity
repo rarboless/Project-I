@@ -8755,9 +8755,8 @@ GameObject:
   - component: {fileID: 1386286361}
   - component: {fileID: 1386286360}
   - component: {fileID: 1386286358}
-  - component: {fileID: 1386286365}
   - component: {fileID: 1386286367}
-  - component: {fileID: 1386286366}
+  - component: {fileID: 1386286365}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Player
@@ -8913,18 +8912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9678af34a8bb1de468afbe0b28331a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1386286366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386286357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9678af34a8bb1de468afbe0b28331a8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1386286367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8938,7 +8925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 5
-  inputScript: {fileID: 1386286366}
+  inputScript: {fileID: 1386286365}
   shakeIntensity: 5
   shakeFrequency: 5
   shakeTime: 0.5
