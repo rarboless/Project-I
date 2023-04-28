@@ -9,9 +9,11 @@ public class ChangeScene : MonoBehaviour {
 
     [SerializeField] private RawImage img;
     [SerializeField] private AnimationCurve fadeCurve;
+    [SerializeField] private Transform spawnPoint;
 
     private void Start() {
         StartCoroutine(FadeIn());
+        FindObjectOfType<Ninja>().transform.position = spawnPoint.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
