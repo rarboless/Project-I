@@ -8,6 +8,7 @@ public class Ninja2Move : MonoBehaviour {
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
+    [SerializeField] private GameObject weapon;
 
     [SerializeField] private InputScript inputScript;
 
@@ -65,11 +66,11 @@ public class Ninja2Move : MonoBehaviour {
 
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        //rigidBody.rotation = aimAngle;
+        weapon.GetComponent<Rigidbody2D>().rotation = aimAngle;
     }
 
     void Shoot() {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, bulletPrefab.GetComponent<Transform>().rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
         
         Destroy(bullet, 5f);
