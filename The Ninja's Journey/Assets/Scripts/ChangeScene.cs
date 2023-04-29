@@ -9,16 +9,20 @@ public class ChangeScene : MonoBehaviour {
 
     [SerializeField] private RawImage img;
     [SerializeField] private AnimationCurve fadeCurve;
+    [SerializeField] private Spawn connection;
     [SerializeField] private Transform spawnPoint;
 
     private void Start() {
         StartCoroutine(FadeIn());
-        FindObjectOfType<Ninja>().transform.position = spawnPoint.position;
+
+        if (connection == Spawn.ActiveConnection) {
+            FindAnyObjectByType<Ninja>().transform.position = spawnPoint.position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
-            Debug.Log("Player has entered the trigger " + sceneBuildIndex);
+            Spawn.ActiveConnection = connection;
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }
