@@ -65,6 +65,7 @@ public class Ninja2Move : MonoBehaviour {
 
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        //rigidBody.rotation = aimAngle;
     }
 
     void Shoot() {
