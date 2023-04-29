@@ -359,6 +359,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  connection: {fileID: 0}
   spawnPoint: {fileID: 0}
 --- !u!61 &614782479
 BoxCollider2D:
@@ -8643,6 +8644,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809243811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809243812}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809243812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809243811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.037, y: -0.183, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1386286363}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1055618003
 GameObject:
   m_ObjectHideFlags: 0
@@ -8699,6 +8731,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  connection: {fileID: 0}
   spawnPoint: {fileID: 0}
 --- !u!61 &1055618005
 BoxCollider2D:
@@ -8897,6 +8930,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1427546929}
+  - {fileID: 809243812}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8925,6 +8959,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 5
+  firePoint: {fileID: 809243812}
+  bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
+  fireForce: 20
   inputScript: {fileID: 1386286365}
   shakeIntensity: 5
   shakeFrequency: 5

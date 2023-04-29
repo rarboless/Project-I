@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Ninja2Move : MonoBehaviour {
     [SerializeField] private float velocity;
-    /*[SerializeField] private GameObject firePoint;
-    [SerializeField] private GameObject bullet;*/
+
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float fireForce;
 
     [SerializeField] private InputScript inputScript;
 
     private Vector3 movement;
+    private Vector2 mousePosition;
+
 
     private Rigidbody2D rigidBody;
 
@@ -34,9 +38,11 @@ public class Ninja2Move : MonoBehaviour {
     void FixedUpdate() {
         MovementProcess();
 
-        if (Input.GetMouseButtonDown(0)) {
-            //Shoot();
+        if (Input.GetMouseButtonDown(1)) {
+            Shoot();
         }
+
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void MovementProcess() {
@@ -56,18 +62,15 @@ public class Ninja2Move : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }
+
+        Vector2 aimDirection = mousePosition - rigidBody.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
     }
 
-    /*void Shoot() {
-        Vector3 v3;
-        if (transform.localScale.x == 1.0f) {
-            v3 = Vector3.right;
-        }
-        else {
-            v3 = Vector3.left;
-        }
-
-        GameObject bala = Instantiate(bullet, transform.position + v3 * 0.2f, transform.rotation);
-        Destroy(bala, 5f);
-    }*/
+    void Shoot() {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        
+        Destroy(bullet, 5f);
+    }
 }

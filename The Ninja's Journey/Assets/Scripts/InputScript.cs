@@ -10,6 +10,7 @@ public class InputScript : MonoBehaviour {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        movement = new Vector3(movement.x, movement.y, 0).normalized;
         return movement;
     }
 }
