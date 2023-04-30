@@ -9013,7 +9013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 5
-  firePoint: {fileID: 809243812}
+  firePoint: {fileID: 809243811}
   bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
   fireForce: 20
   weapon: {fileID: 39842228}
