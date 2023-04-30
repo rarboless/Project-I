@@ -10,7 +10,7 @@ public class CursorManager : MonoBehaviour
 
     void Start()
     {
-        hotSpot = new Vector2(cursorTexture.width, cursorTexture.height);
+        hotSpot = new Vector2(cursorTexture.width/2, cursorTexture.height/2);
         Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 }
