@@ -8844,6 +8844,7 @@ GameObject:
   - component: {fileID: 1386286358}
   - component: {fileID: 1386286367}
   - component: {fileID: 1386286365}
+  - component: {fileID: 1386286368}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Player
@@ -9007,7 +9008,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386286357}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd11fbec013008c49ab25e4c690142a4, type: 3}
   m_Name: 
@@ -9018,6 +9019,27 @@ MonoBehaviour:
   fireForce: 20
   weapon: {fileID: 39842228}
   inputScript: {fileID: 1386286365}
+  shakeIntensity: 5
+  shakeFrequency: 5
+  shakeTime: 0.5
+--- !u!114 &1386286368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386286357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df003c6efc6a02448bcc0430e86319ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 5
+  inputScript: {fileID: 1386286365}
+  firePoint: {fileID: 809243811}
+  bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
+  fireForce: 20
+  weapon: {fileID: 39842228}
   shakeIntensity: 5
   shakeFrequency: 5
   shakeTime: 0.5
