@@ -72,7 +72,8 @@ public class Ninja2Move : MonoBehaviour {
     }
 
     void Shoot() {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.GetComponent<Transform>().position, bulletPrefab.GetComponent<Transform>().rotation);
+        Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mousePosition.y - rigidBody.position.y, mousePosition.x - rigidBody.position.x) * Mathf.Rad2Deg);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.GetComponent<Transform>().position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<Transform>().up * fireForce, ForceMode2D.Impulse);
         
         Destroy(bullet, 5f);
