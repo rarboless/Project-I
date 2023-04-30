@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ninja2Move : MonoBehaviour {
     [SerializeField] private float velocity;
 
-    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
     [SerializeField] private GameObject weapon;
@@ -51,6 +51,7 @@ public class Ninja2Move : MonoBehaviour {
 
         if (movement != Vector3.zero) {
             rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
+            firePoint.GetComponent<Transform>().position = rigidBody.position;
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
@@ -70,8 +71,8 @@ public class Ninja2Move : MonoBehaviour {
     }
 
     void Shoot() {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, bulletPrefab.GetComponent<Transform>().rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.GetComponent<Transform>().position, bulletPrefab.GetComponent<Transform>().rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<Transform>().up * fireForce, ForceMode2D.Impulse);
         
         Destroy(bullet, 5f);
     }
