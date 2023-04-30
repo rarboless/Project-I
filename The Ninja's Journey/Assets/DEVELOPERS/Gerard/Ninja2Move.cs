@@ -51,7 +51,8 @@ public class Ninja2Move : MonoBehaviour {
 
         if (movement != Vector3.zero) {
             rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
-            firePoint.GetComponent<Transform>().position = rigidBody.position;
+            weapon.GetComponent<Transform>().position = rigidBody.position;
+            firePoint.GetComponent<Transform>().position = weapon.GetComponent<Transform>().position;
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
