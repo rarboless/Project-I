@@ -56,7 +56,8 @@ public class Ninja : MonoBehaviour {
         if(movement != Vector3.zero) {
             rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
             weapon.GetComponent<UnityEngine.Transform>().position = rigidBody.position;
-            firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position;
+            firePoint.GetComponent<UnityEngine.Transform>().position = new Vector3(0.0f, 0.0f, -0.2f);
+            firePoint.GetComponent<UnityEngine.Transform>().position += weapon.GetComponent<UnityEngine.Transform>().position;
 
 
             animator.SetFloat("moveX", movement.x);
