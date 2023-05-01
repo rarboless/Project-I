@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DEVELOPERS/Roger/Roger_InteriorHome.unity
     guid: 14567e02b4486e240b4790cc90c7901f
+  - enabled: 1
+    path: Assets/DEVELOPERS/Gerard/_Gerard_Exterior.unity
+    guid: c342e69a042539842866b20ad9199bce
+  - enabled: 1
+    path: Assets/DEVELOPERS/Gerard/_Gerard_SnowExterior.unity
+    guid: afa487664449e58469a1734600c89504
+  - enabled: 1
+    path: Assets/DEVELOPERS/Gerard/_Gerard_InteriorHome.unity
+    guid: 7ee6b1c25558f474d9d99cfee3fdc0a3
   m_configObjects: {}
