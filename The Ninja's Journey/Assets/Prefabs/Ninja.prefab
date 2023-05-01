@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3733503869619970335}
   - component: {fileID: 3733503869619970334}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3733503869941179975}
   - component: {fileID: 3733503869941179992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3733503870460838924}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3733503870949127065}
   - component: {fileID: 3733503870949127067}
   - component: {fileID: 3733503870949127066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 3733503870970650039}
   - component: {fileID: 3733503870970650037}
   - component: {fileID: 3733503870970649992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ninja
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -479,6 +479,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
   fireForce: 20
   weapon: {fileID: 3733503869619970332}
+  timeBetweenShots: 0.28
   shakeIntensity: 5
   shakeFrequency: 5
   shakeTime: 0.5
