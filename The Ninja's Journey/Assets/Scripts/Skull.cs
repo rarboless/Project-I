@@ -22,14 +22,14 @@ public class Skull : Enemy
     }
 
     void CheckDistance() {
+        animator.SetBool("isWalking", true);
+
         if (Vector2.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius) {
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
-            animator.SetBool("isWalking", true);
         }
         else {
-            animator.SetBool("isWalking", false);
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
         }
     }
