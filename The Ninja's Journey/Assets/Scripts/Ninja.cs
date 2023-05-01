@@ -20,6 +20,8 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
     [SerializeField] private GameObject weapon;
+    [SerializeField] private float timeBetweenShots = 1;
+    private float timeOfLastShot;
 
     [Header("Camera Shake")]
     [SerializeField] private float shakeIntensity;
@@ -40,7 +42,10 @@ public class Ninja : MonoBehaviour {
             CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }
         if (Input.GetMouseButtonDown(1)) {
-            Shoot();
+            if(Time.time - timeOfLastShot >= timeBetweenShots) {
+                Shoot();
+                timeOfLastShot = Time.time;
+            }
         }
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
