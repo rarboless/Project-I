@@ -20,8 +20,9 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
     [SerializeField] private GameObject weapon;
-    [SerializeField] private float timeBetweenShots = 1;
+    [SerializeField] private float timeBetweenShots;
     private float timeOfLastShot;
+    private GameObject bullet;
 
     [Header("Camera Shake")]
     [SerializeField] private float shakeIntensity;
@@ -53,6 +54,8 @@ public class Ninja : MonoBehaviour {
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         weapon.GetComponent<Rigidbody2D>().rotation = aimAngle;
+        firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
+
     }
 
     void MovementProcess() {
@@ -60,14 +63,14 @@ public class Ninja : MonoBehaviour {
 
         if(movement != Vector3.zero) {
             rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
-            weapon.GetComponent<UnityEngine.Transform>().position = rigidBody.position;
-            firePoint.GetComponent<UnityEngine.Transform>().position = new Vector3(0.0f, 0.0f, 0f);
-            firePoint.GetComponent<UnityEngine.Transform>().position += weapon.GetComponent<UnityEngine.Transform>().position;
-
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
             animator.SetBool("isWalking", true);
+
+            weapon.GetComponent<UnityEngine.Transform>().position = rigidBody.position;
+            firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
+
         }
         else {
             animator.SetBool("isWalking", false);
@@ -76,7 +79,7 @@ public class Ninja : MonoBehaviour {
 
     void Shoot() {
         Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mousePosition.y - rigidBody.position.y, mousePosition.x - rigidBody.position.x) * Mathf.Rad2Deg);
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
+        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
 
         Destroy(bullet, 5f);
