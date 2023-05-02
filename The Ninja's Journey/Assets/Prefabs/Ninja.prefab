@@ -440,15 +440,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd11fbec013008c49ab25e4c690142a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
-  firePoint: {fileID: 3733503870460838923}
-  bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
-  fireForce: 20
-  weapon: {fileID: 3733503869941179974}
-  inputScript: {fileID: 3733503870970650037}
-  shakeIntensity: 5
-  shakeFrequency: 5
-  shakeTime: 0.5
+  velocity: 0
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  fireForce: 0
+  weapon: {fileID: 0}
+  inputScript: {fileID: 0}
+  shakeIntensity: 0
+  shakeFrequency: 0
+  shakeTime: 0
 --- !u!114 &3733503870970650037
 MonoBehaviour:
   m_ObjectHideFlags: 0
