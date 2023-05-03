@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
             TakeDamage();
         }
         if(Input.GetKeyDown(KeyCode.X)) {
-            Heal(1);
+            Heal();
         }
     }
 
@@ -33,10 +33,16 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void Heal(int heal) {
-        health += heal;
-        if(health > 3) {
-            health = 3;
+    public void Heal() {
+        health += 1;
+    }
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.collider.CompareTag("Enemy")) {
+            TakeDamage();
+        }
+        if(collision.collider.CompareTag("Heal")) {
+            health += 1;
+            Destroy(collision.gameObject);
         }
     }
 }
