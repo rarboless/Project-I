@@ -12,11 +12,14 @@ public class Skull : Enemy
     private Vector3 movement;
     private Animator animator;
 
-    public int health = 3;
+    public int maxHealth = 3;
+    private int hits = 0;
+    public EnemyHealthBar healthBar;
 
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        healthBar.SetHealth(hits, maxHealth);
     }
 
     private void Update() {
@@ -37,8 +40,9 @@ public class Skull : Enemy
     }
 
     public void TakeDamage() {
-        health -= 1;
-        if(health <= 0) {
+        maxHealth -= 1;
+        hits--;
+        if(maxHealth <= 0) {
             Destroy(gameObject);
         }
     }
