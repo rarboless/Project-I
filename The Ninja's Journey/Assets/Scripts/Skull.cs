@@ -12,6 +12,8 @@ public class Skull : Enemy
     private Vector3 movement;
     private Animator animator;
 
+    public int health = 3;
+
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
@@ -31,6 +33,19 @@ public class Skull : Enemy
         }
         else {
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void TakeDamage() {
+        health -= 1;
+        if(health <= 0) {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.collider.CompareTag("Bullet")) {
+            TakeDamage();
         }
     }
 }
