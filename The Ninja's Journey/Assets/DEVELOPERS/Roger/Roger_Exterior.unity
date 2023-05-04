@@ -9007,11 +9007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9101143
+      value: -5.910114
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59379
+      value: 2.5937858
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -9307,6 +9307,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: healthScript
+      value: 
+      objectReference: {fileID: 1740811497}
     - target: {fileID: 3733503870970650033, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_Mass
       value: 500
@@ -9485,6 +9489,18 @@ MonoBehaviour:
   - {fileID: 1033022223}
   fullHeart: {fileID: -1518854399, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
   emptyHeart: {fileID: -2003610257, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
+  ninja: {fileID: 1740811498}
+--- !u!114 &1740811498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+  m_PrefabInstance: {fileID: 1239033700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740811488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df003c6efc6a02448bcc0430e86319ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1866651261 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7432453338703146032, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}

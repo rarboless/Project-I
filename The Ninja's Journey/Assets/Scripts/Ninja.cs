@@ -13,6 +13,7 @@ public class Ninja : MonoBehaviour {
     private Rigidbody2D rigidBody;
     private Animator animator;
 
+    [Header("Scripts funcionals")]
     [SerializeField] private InputScript inputScript;
 
     [Header("Atac")]
@@ -55,7 +56,6 @@ public class Ninja : MonoBehaviour {
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         weapon.GetComponent<Rigidbody2D>().rotation = aimAngle;
         firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
-
     }
 
     void MovementProcess() {
@@ -83,5 +83,9 @@ public class Ninja : MonoBehaviour {
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
 
         Destroy(bullet, 5f);
+    }
+
+    public void Die() {
+        Destroy(this.gameObject);
     }
 }
