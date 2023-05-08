@@ -29,8 +29,11 @@ public class Health : MonoBehaviour {
     }
 
     public void TakeDamage() {
-        if (health <= 0) {
+        if (health <= 1) {
             ninja.Die();
+            foreach (Image heart in hearts) {
+                heart.sprite = emptyHeart;
+            }
         }
 
         health -= 1;
