@@ -16,7 +16,7 @@ public class Health : MonoBehaviour {
         foreach (Image heart in hearts) {
             heart.sprite = emptyHeart;
         }
-        for (int i = 0; i < health; i++) {
+        for (int i = 0; i < 3; i++) {
             hearts[i].sprite = fullHeart;
         }
         
@@ -54,10 +54,13 @@ public class Health : MonoBehaviour {
     }
 
     public void AddHealth(int value) {
-        health += value;
+        if (health < 3) {
+            health += value;
+        }
     }
 
-    public void Respawn() {
+    public void Respawn(Transform checkpointTransform) {
         AddHealth(3);
+        Instantiate(ninja, checkpointTransform.position, checkpointTransform.rotation);
     }
 }

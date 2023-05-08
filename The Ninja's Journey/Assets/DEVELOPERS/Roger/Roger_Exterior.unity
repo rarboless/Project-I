@@ -9182,11 +9182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9088593
+      value: -5.90886
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6291804
+      value: 2.6291819
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -9594,6 +9594,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: checkPoint
+      value: 
+      objectReference: {fileID: 1740811505}
+    - target: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: healthScript
       value: 
       objectReference: {fileID: 1740811497}
@@ -9603,7 +9607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650033, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650033, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_UseAutoMass
