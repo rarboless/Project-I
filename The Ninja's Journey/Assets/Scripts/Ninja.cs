@@ -53,6 +53,7 @@ public class Ninja : MonoBehaviour {
             }
         }
         if (Input.GetKeyDown(KeyCode.R)) {
+            Destroy(this.gameObject);
             checkPoint.Reset();
         }
 

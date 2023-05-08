@@ -21,7 +21,6 @@ public class CheckPoint : MonoBehaviour {
         if (collision.transform.tag == "CheckPoint"){
             currentCheckpoint = collision.transform;
             collision.enabled = false;
-            Debug.Log("as");
         }
     }
 }

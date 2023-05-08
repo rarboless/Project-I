@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,11 @@ public class Health : MonoBehaviour {
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
 
-    [SerializeField] private Ninja ninja;
+    [SerializeField] private Ninja ninjaScript;
+    [SerializeField] private GameObject ninjaPrefab;
+    private GameObject ninja;
+
+    [SerializeField] private CinemachineVirtualCamera vcam;
 
     private void Update() {
         foreach (Image heart in hearts) {
@@ -30,7 +35,7 @@ public class Health : MonoBehaviour {
 
     public void TakeDamage() {
         if (health <= 1) {
-            ninja.Die();
+            ninjaScript.Die();
             foreach (Image heart in hearts) {
                 heart.sprite = emptyHeart;
             }
@@ -62,8 +67,8 @@ public class Health : MonoBehaviour {
     }
 
     public void Respawn(Transform checkpointTransform) {
-        Destroy(ninja);
         AddHealth(3);
-        Instantiate(ninja, checkpointTransform.position, checkpointTransform.rotation);
+        ninja = Instantiate(ninjaPrefab, checkpointTransform.position, checkpointTransform.rotation);
+        vcam.Follow = ninja.transform;
     }
 }
