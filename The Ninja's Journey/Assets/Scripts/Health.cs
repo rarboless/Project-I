@@ -17,6 +17,8 @@ public class Health : MonoBehaviour {
 
     [SerializeField] private CinemachineVirtualCamera vcam;
 
+    [SerializeField] private Skull enemy;
+
     private void Update() {
         foreach (Image heart in hearts) {
             heart.sprite = emptyHeart;
@@ -70,5 +72,6 @@ public class Health : MonoBehaviour {
         AddHealth(3);
         ninja = Instantiate(ninjaPrefab, checkpointTransform.position, checkpointTransform.rotation);
         vcam.Follow = ninja.transform;
+        enemy.target = GameObject.FindWithTag("Player").transform;
     }
 }
