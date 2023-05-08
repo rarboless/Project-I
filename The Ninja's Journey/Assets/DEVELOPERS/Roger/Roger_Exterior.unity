@@ -8967,7 +8967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Skull
   baseAttack: 1
-  target: {fileID: 0}
+  target: {fileID: 1740811496}
   chaseRadius: 6
   attackRadius: 0
   homePosition: {fileID: 434276082}
@@ -9071,11 +9071,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9088593
+      value: -5.90886
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6291804
+      value: 2.6291819
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -9736,6 +9736,7 @@ MonoBehaviour:
   ninjaScript: {fileID: 1740811498}
   ninjaPrefab: {fileID: 3733503870970650045, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
   vcam: {fileID: 913300264}
+  enemy: {fileID: 0}
 --- !u!114 &1740811498 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
