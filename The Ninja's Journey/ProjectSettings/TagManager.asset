@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Heal
   - Bullet
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

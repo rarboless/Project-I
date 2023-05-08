@@ -49,4 +49,12 @@ public class Health : MonoBehaviour {
             Destroy(collision.gameObject);
         }
     }
+
+    public void AddHealth(int value) {
+        health += value;
+    }
+
+    public void Respawn() {
+        AddHealth(3);
+    }
 }
