@@ -72,6 +72,7 @@ public class Health : MonoBehaviour {
         AddHealth(3);
         ninja = Instantiate(ninjaPrefab, checkpointTransform.position, checkpointTransform.rotation);
         vcam.Follow = ninja.transform;
-        enemy.target = GameObject.FindWithTag("Player").transform;
+        enemy.target = ninja.transform;
+
     }
 }
