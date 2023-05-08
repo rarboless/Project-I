@@ -30,6 +30,8 @@ public class Skull : Enemy
     }
 
     void CheckDistance() {
+        target = GameObject.FindWithTag("Player").transform;
+
         animator.SetBool("isWalking", true);
 
         if (Vector2.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius) {
