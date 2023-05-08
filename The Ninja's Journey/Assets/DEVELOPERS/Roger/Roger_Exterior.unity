@@ -9206,6 +9206,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
+--- !u!114 &913300264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3873141254235834673, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
+  m_PrefabInstance: {fileID: 757538609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &939632380
 GameObject:
   m_ObjectHideFlags: 0
@@ -9825,7 +9836,9 @@ MonoBehaviour:
   - {fileID: 1033022223}
   fullHeart: {fileID: -1518854399, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
   emptyHeart: {fileID: -2003610257, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
-  ninja: {fileID: 1740811498}
+  ninjaScript: {fileID: 1740811498}
+  ninjaPrefab: {fileID: 3733503870970650045, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+  vcam: {fileID: 913300264}
 --- !u!114 &1740811498 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
