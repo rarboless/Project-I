@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour
-{
+public class CheckPoint : MonoBehaviour {
     private Transform currentCheckpoint;
     private Health playerHealth;
 
@@ -13,7 +12,7 @@ public class CheckPoint : MonoBehaviour
 
     public void Reset() {
         transform.position = currentCheckpoint.position;
-        playerHealth.Respawn();
+        playerHealth.Respawn(currentCheckpoint);
 
         CineMachineShake.Instance.ShakeCamera(5f, 0.1f, 0.5f);
     }

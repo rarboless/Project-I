@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
     public static GameManager Instance;
 
     private Transform currentCheckpoint;
@@ -13,7 +12,8 @@ public class GameManager : MonoBehaviour
     private void Awake() {
         if (Instance == null) {
             Instance = this;
-        }else if(Instance != this) {
+        }
+        else if(Instance != this) {
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     public void Reset() {
         transform.position = currentCheckpoint.position;
-        playerHealth.Respawn();
+        playerHealth.Respawn(currentCheckpoint);
 
         CineMachineShake.Instance.ShakeCamera(5f, 0.1f, 0.5f);
     }

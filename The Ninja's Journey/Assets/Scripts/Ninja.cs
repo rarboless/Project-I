@@ -30,6 +30,9 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
+    private bool dead = false;
+    [SerializeField] private CheckPoint checkPoint;
+
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -48,6 +51,10 @@ public class Ninja : MonoBehaviour {
                 Shoot();
                 timeOfLastShot = Time.time;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            Destroy(this.gameObject);
+            checkPoint.Reset();
         }
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -87,5 +94,6 @@ public class Ninja : MonoBehaviour {
 
     public void Die() {
         Destroy(this.gameObject);
+        dead = true;
     }
 }
