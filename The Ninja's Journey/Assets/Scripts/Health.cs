@@ -40,7 +40,9 @@ public class Health : MonoBehaviour {
     }
 
     public void Heal() {
-        health += 1;
+        if (health < 3) {
+            health += 1;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
