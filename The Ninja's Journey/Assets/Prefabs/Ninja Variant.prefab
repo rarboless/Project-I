@@ -20,6 +20,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3733503869941179992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733503869941179992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_SortingLayerID
       value: -561142491
       objectReference: {fileID: 0}
@@ -109,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650045, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_Name
-      value: Ninja
+      value: Ninja Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650045, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_Layer
