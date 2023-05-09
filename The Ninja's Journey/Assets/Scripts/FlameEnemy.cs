@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class FlameEnemy : MonoBehaviour
 {
@@ -18,6 +19,13 @@ public class FlameEnemy : MonoBehaviour
     public float moveSpeed;
     private Rigidbody2D rb;
 
+    [SerializeField] private GameObject firePoint;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float fireForce;
+    [SerializeField] private float timeBetweenShots;
+    private float timeOfLastShot;
+    private GameObject bullet;
+
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
@@ -27,6 +35,12 @@ public class FlameEnemy : MonoBehaviour
 
     private void Update() {
         CheckDistance();
+        if (Vector2.Distance(target.position, transform.position) <= attackRadius) {
+            if (Time.time >= timeOfLastShot + timeBetweenShots) {
+                Shoot();
+                timeOfLastShot = Time.time;
+            }
+        }
     }
 
     void CheckDistance() {
@@ -46,6 +60,16 @@ public class FlameEnemy : MonoBehaviour
         else {
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
         }
+    }
+    void Shoot() {
+        //enemy position
+
+        Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(target.position.y - rb.position.y, target.position.x - rb.position.x) * Mathf.Rad2Deg);
+
+        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
+
+        Destroy(bullet, 5f);
     }
 
     public void TakeDamage() {
