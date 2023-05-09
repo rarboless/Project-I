@@ -62,9 +62,8 @@ public class FlameEnemy : Enemy {
         }
     }
     void Shoot() {
-        //Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(target.position.y - rb.position.y, target.position.x - rb.position.x) * Mathf.Rad2Deg);
-
-        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, firePoint.GetComponent<UnityEngine.Transform>().rotation);
+        Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(target.position.y - firePoint.transform.position.y, target.position.x - firePoint.transform.position.x) * Mathf.Rad2Deg);
+        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
 
         Destroy(bullet, 5f);
