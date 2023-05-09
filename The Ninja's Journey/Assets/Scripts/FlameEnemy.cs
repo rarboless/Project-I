@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class FlameEnemy : Enemy
-{
+public class FlameEnemy : Enemy {
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
@@ -37,6 +36,7 @@ public class FlameEnemy : Enemy
         CheckDistance();
         if (Vector2.Distance(target.position, transform.position) <= attackRadius) {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
+                Debug.Log("efsg");
                 Shoot();
                 timeOfLastShot = Time.time;
             }
@@ -52,7 +52,7 @@ public class FlameEnemy : Enemy
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             //move with rb instead
             Vector2 temp = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            rb.MovePosition(temp);
+            //rb.MovePosition(temp);
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
@@ -62,9 +62,9 @@ public class FlameEnemy : Enemy
         }
     }
     void Shoot() {
-        Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(target.position.y - rb.position.y, target.position.x - rb.position.x) * Mathf.Rad2Deg);
+        //Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(target.position.y - rb.position.y, target.position.x - rb.position.x) * Mathf.Rad2Deg);
 
-        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
+        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, firePoint.GetComponent<UnityEngine.Transform>().rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
 
         Destroy(bullet, 5f);
