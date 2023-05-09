@@ -36,14 +36,15 @@ public class Health : MonoBehaviour {
     }
 
     public void TakeDamage() {
-        if (health <= 1) {
-            ninjaScript.Die();
+        health -= 1;
+
+        if (health <= 0) {
             foreach (Image heart in hearts) {
                 heart.sprite = emptyHeart;
             }
+            ninjaScript.Die();
         }
 
-        health -= 1;
     }
 
     public void Heal() {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+using System.Diagnostics;
 
 public class Ninja : MonoBehaviour {
     [Header("Moviment Ninja")]
@@ -94,7 +95,10 @@ public class Ninja : MonoBehaviour {
     }
 
     public void Die() {
-        Destroy(this.gameObject);
+        animator.SetBool("isDead", true);
+        rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        Destroy(this.gameObject,2f);
         dead = true;
     }
 }
