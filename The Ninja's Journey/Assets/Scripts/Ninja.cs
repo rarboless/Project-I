@@ -31,7 +31,7 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
-    private bool dead = false;
+    [HideInInspector] public bool dead = false;
     [SerializeField] private CheckPoint checkPoint;
 
     void Start() {
@@ -100,5 +100,7 @@ public class Ninja : MonoBehaviour {
 
         Destroy(this.gameObject,2f);
         dead = true;
+
+        checkPoint.Reset();
     }
 }
