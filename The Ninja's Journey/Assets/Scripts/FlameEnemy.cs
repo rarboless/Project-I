@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class FlameEnemy : MonoBehaviour
+public class FlameEnemy : Enemy
 {
     public Transform target;
     public float chaseRadius;
@@ -36,7 +36,7 @@ public class FlameEnemy : MonoBehaviour
     private void Update() {
         CheckDistance();
         if (Vector2.Distance(target.position, transform.position) <= attackRadius) {
-            if (Time.time >= timeOfLastShot + timeBetweenShots) {
+            if (Time.time - timeOfLastShot >= timeBetweenShots) {
                 Shoot();
                 timeOfLastShot = Time.time;
             }
@@ -62,8 +62,6 @@ public class FlameEnemy : MonoBehaviour
         }
     }
     void Shoot() {
-        //enemy position
-
         Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(target.position.y - rb.position.y, target.position.x - rb.position.x) * Mathf.Rad2Deg);
 
         bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);

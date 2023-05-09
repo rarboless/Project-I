@@ -420,17 +420,45 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3733503869768596183}
     - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: enemyName
+      value: Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: fireForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 1820460032}
+    - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: moveSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: baseAttack
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: chaseRadius
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: attackRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
+    - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: homePosition
       value: 
       objectReference: {fileID: 9179049}
+    - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6458237169182175539, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: m_RootOrder
       value: 0
