@@ -6,6 +6,10 @@ public class CheckPoint : MonoBehaviour {
     private Transform currentCheckpoint;
     private Health playerHealth;
 
+    private void Start() {
+        currentCheckpoint = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
+
     private void Awake() {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
