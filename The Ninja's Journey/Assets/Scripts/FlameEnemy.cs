@@ -62,8 +62,9 @@ public class FlameEnemy : Enemy {
         }
     }
     void Shoot() {
-        Vector3 direction = target.position - firePoint.transform.position;
-        Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
+        Vector2 direction = target.position - firePoint.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         bullet = Instantiate(bulletPrefab, firePoint.transform.position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(direction.normalized * fireForce, ForceMode2D.Impulse);
 
