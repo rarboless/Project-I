@@ -14,7 +14,6 @@ public class FlameEnemy : Enemy {
 
     public int maxHealth = 3;
     private int hits = 0;
-    public EnemyHealthBar healthBar;
     public float moveSpeed;
     private Rigidbody2D rb;
 
@@ -28,7 +27,6 @@ public class FlameEnemy : Enemy {
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
-        healthBar.SetHealth(hits, maxHealth);
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,11 +34,14 @@ public class FlameEnemy : Enemy {
         CheckDistance();
         if (Vector2.Distance(target.position, transform.position) <= attackRadius) {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
-                Debug.Log("efsg");
                 Shoot();
                 timeOfLastShot = Time.time;
             }
         }
+        Vector2 aimDirection = target.position - firePoint.transform.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        firePoint.GetComponent<Rigidbody2D>().rotation = aimAngle;
+
     }
 
     void CheckDistance() {
@@ -56,6 +57,8 @@ public class FlameEnemy : Enemy {
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
+
+            firePoint.GetComponent<UnityEngine.Transform>().position = rb.position;
         }
         else {
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
@@ -81,7 +84,7 @@ public class FlameEnemy : Enemy {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.CompareTag("Bullet")) {
-            TakeDamage();
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
         }
     }
 }

@@ -14,14 +14,12 @@ public class Skull : Enemy
 
     public int maxHealth = 3;
     private int hits = 0;
-    public EnemyHealthBar healthBar;
     public float moveSpeed;
     private Rigidbody2D rb;
 
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
-        healthBar.SetHealth(hits, maxHealth);
         rb = GetComponent<Rigidbody2D>();
     }
 
