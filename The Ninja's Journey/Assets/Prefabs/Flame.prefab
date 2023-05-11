@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6458237169182175542}
   - component: {fileID: 6458237169182175543}
   - component: {fileID: 6179882222501438421}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flame
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -168,3 +168,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a182b32b90b2a43b4da2055a00f26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: 
+  baseAttack: 0
+  target: {fileID: 0}
+  chaseRadius: 0
+  attackRadius: 0
+  homePosition: {fileID: 0}
+  maxHealth: 3
+  moveSpeed: 0
+  firePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  fireForce: 0
+  timeBetweenShots: 0

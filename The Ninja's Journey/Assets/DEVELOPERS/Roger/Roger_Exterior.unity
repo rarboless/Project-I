@@ -288,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
+      objectReference: {fileID: 5954288518613201371, guid: 99a61442b3351cb418b14fe10e3067bc, type: 3}
     - target: {fileID: 6179882222501438421, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: homePosition
       value: 
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6458237169182175543, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6458237169182175537, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
