@@ -38,10 +38,10 @@ public class FlameEnemy : Enemy {
                 timeOfLastShot = Time.time;
             }
         }
+
         Vector2 aimDirection = target.position - firePoint.transform.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         firePoint.GetComponent<Rigidbody2D>().rotation = aimAngle;
-
     }
 
     void CheckDistance() {
@@ -64,10 +64,12 @@ public class FlameEnemy : Enemy {
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
         }
     }
+
     void Shoot() {
         Vector2 direction = target.position - firePoint.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         bullet = Instantiate(bulletPrefab, firePoint.transform.position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(direction.normalized * fireForce, ForceMode2D.Impulse);
 
