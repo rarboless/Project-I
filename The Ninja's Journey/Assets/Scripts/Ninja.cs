@@ -98,7 +98,7 @@ public class Ninja : MonoBehaviour {
         animator.SetBool("isDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
 
-        Destroy(this.gameObject,2f);
+        Destroy(this.gameObject, 2f);
         dead = true;
 
         checkPoint.Reset();

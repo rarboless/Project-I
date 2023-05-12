@@ -56,7 +56,7 @@ public class Health : MonoBehaviour {
         if (collision.collider.CompareTag("Enemy")) {
             TakeDamage();
         }
-        if(collision.collider.CompareTag("FlameBullet")) {
+        if (collision.collider.CompareTag("FlameBullet")) {
             TakeDamage();
         }
         if (collision.collider.CompareTag("Heal")) {
