@@ -7427,7 +7427,6 @@ MonoBehaviour:
   attackRadius: 0
   homePosition: {fileID: 2044715677}
   maxHealth: 3
-  healthBar: {fileID: 946395758}
   moveSpeed: 2
 --- !u!61 &852298961
 BoxCollider2D:
@@ -9785,6 +9784,14 @@ PrefabInstance:
     - target: {fileID: 5837123501760429370, guid: 3915a3d5770765d4b81354767f7faf39, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837123501760429370, guid: 3915a3d5770765d4b81354767f7faf39, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5837123501760429370, guid: 3915a3d5770765d4b81354767f7faf39, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5837123501760429370, guid: 3915a3d5770765d4b81354767f7faf39, type: 3}
       propertyPath: m_LocalPosition.x
