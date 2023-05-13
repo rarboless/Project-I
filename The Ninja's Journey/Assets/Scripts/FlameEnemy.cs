@@ -4,22 +4,27 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class FlameEnemy : Enemy {
+    [Header("Propietats principals")]
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
 
+    [Header("Moviment")]
     private Vector3 movement;
     private Animator animator;
 
+    [Header("Estadístiques")]
     public int maxHealth = 3;
     private int hits = 0;
     public float moveSpeed;
     private Rigidbody2D rb;
 
+    [Header("Atac stuff")]
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
+    [SerializeField] private GameObject weapon;
     [SerializeField] private float timeBetweenShots;
     private float timeOfLastShot;
     private GameObject bullet;
@@ -41,7 +46,8 @@ public class FlameEnemy : Enemy {
 
         Vector2 aimDirection = target.position - firePoint.transform.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        firePoint.GetComponent<Rigidbody2D>().rotation = aimAngle;
+        weapon.GetComponent<Rigidbody2D>().rotation = aimAngle;
+        firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
     }
 
     void CheckDistance() {
@@ -58,7 +64,8 @@ public class FlameEnemy : Enemy {
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
 
-            firePoint.GetComponent<UnityEngine.Transform>().position = rb.position;
+            weapon.GetComponent<UnityEngine.Transform>().position = rb.position;
+            firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
         }
         else {
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
