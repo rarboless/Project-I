@@ -264,5 +264,6 @@ MonoBehaviour:
   moveSpeed: 0
   firePoint: {fileID: 1000989596667329383}
   bulletPrefab: {fileID: 0}
-  fireForce: 0
-  timeBetweenShots: 0
+  fireForce: 5
+  weapon: {fileID: 0}
+  timeBetweenShots: 2
