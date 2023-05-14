@@ -56,7 +56,7 @@ public class Ninja : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        speed = ChangeSpeedOnHealth(health);
+        speed = ChangeSpeedOnHealth();
         MovementProcess();
     }
 
@@ -147,7 +147,7 @@ public class Ninja : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
-    private float ChangeSpeedOnHealth(int health) {
+    private float ChangeSpeedOnHealth() {
         if(health == 2) {
             return 4f;
         }
