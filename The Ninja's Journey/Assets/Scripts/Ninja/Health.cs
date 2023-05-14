@@ -5,19 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
-    //public int health = 3; //public -> Ninja uses
-
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
-
     [SerializeField] private Ninja ninjaScript;
-    //[SerializeField] private GameObject ninjaPrefab;
-    //private GameObject ninja;
-
-    [SerializeField] private CinemachineVirtualCamera vcam;
-
-    [SerializeField] private Skull enemy;
 
     private void Update() {
         foreach (Image heart in hearts) {
@@ -73,14 +64,4 @@ public class Health : MonoBehaviour {
             ninjaScript.health += value;
         }
     }
-    
-    /*
-    public void Respawn(Transform checkpointTransform) {
-        AddHealth(3);
-        ninja = Instantiate(ninjaPrefab, checkpointTransform.position, checkpointTransform.rotation);
-        vcam.Follow = ninja.transform;
-        enemy.target = ninja.transform;
-        //ninjaScript.dead = false;
-    }
-    */
 }
