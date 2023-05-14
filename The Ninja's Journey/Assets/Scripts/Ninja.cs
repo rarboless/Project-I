@@ -109,11 +109,12 @@ public class Ninja : MonoBehaviour {
     public void Die() {
         animator.SetBool("isDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
-
-        Destroy(this.gameObject, 2f);
         //dead = true;
-        //wait 2 seconds until load the scene
-        new WaitForSeconds(2f);
+        Invoke("Respawn", 2f);
+    }
+
+    private void Respawn() {
+        Destroy(this.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
