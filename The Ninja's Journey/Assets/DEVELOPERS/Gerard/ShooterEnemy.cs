@@ -9,7 +9,7 @@ public class ShooterEnemy : Enemy {
     [SerializeField] private float rotateSpeed = 0.0025f;
     private Rigidbody2D rb;
 
-    [SerializeField] private float Range = 5f;
+    //[SerializeField] private float Range = 5f;
     [SerializeField] private float distanceToStop = 3f; //L'enemic es deixarà de moure cap el jugador 
 
     [SerializeField] private Transform firePoint;

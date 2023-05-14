@@ -76,6 +76,6 @@ public class Health : MonoBehaviour {
         ninja = Instantiate(ninjaPrefab, checkpointTransform.position, checkpointTransform.rotation);
         vcam.Follow = ninja.transform;
         enemy.target = ninja.transform;
-        ninjaScript.dead = false;
+        //ninjaScript.dead = false;
     }
 }

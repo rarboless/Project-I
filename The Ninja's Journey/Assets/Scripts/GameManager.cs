@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void Reset() {
-        transform.position = currentCheckpoint.position;
-        playerHealth.Respawn(currentCheckpoint);
+        //transform.position = currentCheckpoint.position;
+        //playerHealth.Respawn(currentCheckpoint);
 
         CineMachineShake.Instance.ShakeCamera(5f, 0.1f, 0.5f);
     }

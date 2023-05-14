@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using System.Diagnostics;
+using UnityEngine.SceneManagement;
 
 public class Ninja : MonoBehaviour {
     [Header("Moviment Ninja")]
@@ -31,12 +32,18 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
-    [HideInInspector] public bool dead = false;
-    [SerializeField] private CheckPoint checkPoint;
+    //[HideInInspector] public bool dead = false;
+    //[SerializeField] private CheckPoint checkPoint;
+    //private CheckPointV2 checkPointV2;
+
+
+    private GameMaster gm;
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+        transform.position = gm.lastCheckPointPos;
     }
 
     void FixedUpdate() {
@@ -53,12 +60,17 @@ public class Ninja : MonoBehaviour {
                 timeOfLastShot = Time.time;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R)) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        /*
         if (Input.GetKeyDown(KeyCode.R)) {
             Destroy(this.gameObject);
             checkPoint.Reset();
         }
-
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        */
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
@@ -99,8 +111,9 @@ public class Ninja : MonoBehaviour {
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
 
         Destroy(this.gameObject, 2f);
-        dead = true;
-
-        checkPoint.Reset();
+        //dead = true;
+        //wait 2 seconds until load the scene
+        new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

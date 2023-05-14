@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 3733503870970650039}
   - component: {fileID: 3733503870970650037}
   - component: {fileID: 3733503870970649992}
-  - component: {fileID: -8019501699559515147}
+  - component: {fileID: -6416514566254812884}
   m_Layer: 7
   m_Name: Ninja
   m_TagString: Player
@@ -486,7 +486,7 @@ MonoBehaviour:
   shakeTime: 0.5
   dead: 0
   checkPoint: {fileID: 0}
---- !u!114 &-8019501699559515147
+--- !u!114 &-6416514566254812884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,6 +495,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3733503870970650045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e006a1c92afb747b4a5fb813302061, type: 3}
+  m_Script: {fileID: 11500000, guid: 78db019e22af33b4284bcf6e3cb22b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
+  hearts: []
+  fullHeart: {fileID: 0}
+  emptyHeart: {fileID: 0}
+  ninjaScript: {fileID: 0}
+  ninjaPrefab: {fileID: 0}
+  vcam: {fileID: 0}
+  enemy: {fileID: 0}
