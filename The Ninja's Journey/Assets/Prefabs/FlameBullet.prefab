@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1065314723808465775}
   - component: {fileID: 822583551522075006}
-  - component: {fileID: 728935757503138482}
   - component: {fileID: 4793844299884701778}
   - component: {fileID: 921876837309282984}
-  m_Layer: 7
+  - component: {fileID: 757175701447950799}
+  m_Layer: 0
   m_Name: FlameBullet
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -561142491
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1327887069, guid: bffb891492d95c54593ec8a5544ff1cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -87,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &728935757503138482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5954288518613201371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19fae699b1ed0448af6ad35e8dacc48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &4793844299884701778
 Rigidbody2D:
   serializedVersion: 4
@@ -146,3 +134,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.375}
   m_EdgeRadius: 0
+--- !u!114 &757175701447950799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954288518613201371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ce6e8d2c650bb44b4ab143731dabc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

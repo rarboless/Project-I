@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: timeBetweenShots
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6458237169182175536, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6458237169182175539, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -374,6 +378,14 @@ PrefabInstance:
     - target: {fileID: 6458237169182175540, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: m_Name
       value: Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458237169182175540, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458237169182175542, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
+      propertyPath: m_Mass
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6458237169182175543, guid: 8c276554333a10a4da5f407b2697d692, type: 3}
       propertyPath: m_Enabled
@@ -9373,6 +9385,18 @@ PrefabInstance:
     - target: {fileID: 3580215312419301146, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580215312723296781, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580215312723296781, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580215313211585950, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3580215313235729332, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: m_SortingLayer
