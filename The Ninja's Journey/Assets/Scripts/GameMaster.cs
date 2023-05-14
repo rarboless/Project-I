@@ -6,6 +6,9 @@ public class GameMaster : MonoBehaviour
 {
     private static GameMaster instance;
     public Vector2 lastCheckPointPos;
+    public int TotalPoints { get { return TotalPoints; } }
+    public int points;
+
 
     void Awake() {
         if (instance == null) {
@@ -14,5 +17,10 @@ public class GameMaster : MonoBehaviour
         } else {
             Destroy(gameObject);
         }
+    }
+
+    public void AddPoints(int pointsToAdd) {
+        points += pointsToAdd;
+        Debug.Log("Points: " + points);
     }
 }

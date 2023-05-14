@@ -59,11 +59,14 @@ public class Health : MonoBehaviour {
         if (collision.collider.CompareTag("FlameBullet")) {
             TakeDamage();
         }
-        if (collision.collider.CompareTag("Heal")) {
-            health += 1;
+    }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Heal")) {
+            AddHealth(1);
             Destroy(collision.gameObject);
         }
     }
+
 
     public void AddHealth(int value) {
         if (health < 3) {
