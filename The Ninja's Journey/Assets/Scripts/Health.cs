@@ -90,19 +90,6 @@ public class Health : MonoBehaviour {
         }
     }
     */
-    public void ChangeSpeedOnHealth2() {
-        if (health == 2) {
-            ninjaScript.speed = 4f;
-        }
-        else if (health == 1) {
-            ninjaScript.speed = 3f;
-        }
-        else {
-            ninjaScript.speed = 5f;
-        }
-    }
-
-
 
     /*
     public void Respawn(Transform checkpointTransform) {
