@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
-using System.Diagnostics;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class Ninja : MonoBehaviour {
     [Header("Moviment Ninja")]
@@ -23,9 +23,14 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
     [SerializeField] private GameObject weapon;
+    [SerializeField] private GameObject weapon1;
     [SerializeField] private float timeBetweenShots;
     private float timeOfLastShot;
     private GameObject bullet;
+    [SerializeField] private Sprite shurikenSprite;
+    [SerializeField] private GameObject shurikenPrefab;
+    [SerializeField] private Sprite bowSprite;
+    [SerializeField] private GameObject arrowPrefab;
 
     [Header("Camera Shake")]
     [SerializeField] private float shakeIntensity;
@@ -67,6 +72,20 @@ public class Ninja : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.R)) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        //key 1
+        if (Input.GetKeyDown(KeyCode.M)) {
+
+            weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
+            //weapon1.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Assets/Sprites/Shuriken.png");
+
+            bulletPrefab = shurikenPrefab;
+
+        }
+        if (Input.GetKeyDown(KeyCode.N)) {
+            weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
+            bulletPrefab = arrowPrefab;
         }
         /*
         if (Input.GetKeyDown(KeyCode.R)) {

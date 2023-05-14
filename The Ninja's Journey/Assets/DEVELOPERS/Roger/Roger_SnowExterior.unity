@@ -130,14 +130,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3733503869619970332, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733503869941179974, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3733503869941179992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 105d3d5aa7b6cf34b905bcbacba6d932, type: 3}
+    - target: {fileID: 3733503869941179992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733503869941179992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -561142491
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733503870949127064, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 5592070955082474733, guid: 211bf012084ed4b498b2860a42ae37b4, type: 3}
+    - target: {fileID: 3733503870970650034, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650035, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -185,6 +209,10 @@ PrefabInstance:
     - target: {fileID: 3733503870970650045, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_Name
       value: Ninja
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733503870970650045, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5dd572d94675c34fb87df58992b2262, type: 3}

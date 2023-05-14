@@ -702,6 +702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+--- !u!1 &572283164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3580215312206258240, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+  m_PrefabInstance: {fileID: 179980324725203298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &625466979
 GameObject:
   m_ObjectHideFlags: 0
@@ -9820,7 +9825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3580215312206258270, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3580215312419301144, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: m_Simulated
@@ -9850,6 +9855,30 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: sprite1
+      value: 
+      objectReference: {fileID: 21300000, guid: 105d3d5aa7b6cf34b905bcbacba6d932, type: 3}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: weapon1
+      value: 
+      objectReference: {fileID: 572283164}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: bowSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 592c7554ceaec8b439dd4a45d930f8dc, type: 3}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: shurikenPrefab
+      value: 
+      objectReference: {fileID: 5592070955082474733, guid: 211bf012084ed4b498b2860a42ae37b4, type: 3}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: shurikenSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 105d3d5aa7b6cf34b905bcbacba6d932, type: 3}
     - target: {fileID: 3580215313235729332, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: m_SortingLayer
       value: 0
