@@ -43,6 +43,8 @@ public class Ninja : MonoBehaviour {
 
     private GameMaster gm;
     private Health healthScript;
+    private Bow bowScript;
+    private Shuriken shurikenScript;
 
 
     void Start() {
@@ -74,18 +76,24 @@ public class Ninja : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        //key 1
         if (Input.GetKeyDown(KeyCode.M)) {
-
+            //Manera Dolenta pero funciona (S'ha de passar manualment al script els sprites i gameObjects)
             weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
-            //weapon1.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Assets/Sprites/Shuriken.png");
-
             bulletPrefab = shurikenPrefab;
+
+            //Manera bona pero no funciona (Script amb Path dels archis)
+            //weapon1.GetComponent<SpriteRenderer>().sprite = shurikenScript.weaponSprite;
+            //bulletPrefab = shurikenScript.shurikenPrefab;
 
         }
         if (Input.GetKeyDown(KeyCode.N)) {
+            //Manera Dolenta pero funciona (S'ha de passar manualment al script els sprites i gameObjects)
             weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
             bulletPrefab = arrowPrefab;
+
+            //Manera bona pero no funciona (Script amb Path dels archis)
+            //weapon1.GetComponent<SpriteRenderer>().sprite = bowScript.weaponSprite;
+            //bulletPrefab = bowScript.arrowPrefab;
         }
         /*
         if (Input.GetKeyDown(KeyCode.R)) {
