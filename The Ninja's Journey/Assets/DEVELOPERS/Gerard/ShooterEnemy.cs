@@ -9,13 +9,17 @@ public class ShooterEnemy : Enemy {
     [SerializeField] private float rotateSpeed = 0.0025f;
     private Rigidbody2D rb;
 
-    //[SerializeField] private float Range = 5f;
+    [SerializeField] private float range = 5f;
     [SerializeField] private float distanceToStop = 3f; //L'enemic es deixarà de moure cap el jugador 
 
-    [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform t_firePoint;
+    [SerializeField] private GameObject gb_firePoint;
 
     [SerializeField] private float fireRate;
     private float timeToFire;
+
+    private GameObject bullet;
+    [SerializeField] private GameObject bulletPrefab;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -29,19 +33,24 @@ public class ShooterEnemy : Enemy {
             RotateTowardsTaarget();
         }
 
-        if (Vector2.Distance(target.position, transform.position) <= distanceToStop) {
+        if (Vector2.Distance(target.position, transform.position) <= range) {
             Shoot();
         }
     }
 
     private void FixedUpdate() {
-        if (Vector2.Distance(target.position, transform.position) >= distanceToStop) {
-            //rb.velocity = transform.up * moveSpeed;
+        if (target != null) {
+            if (Vector2.Distance(target.position, transform.position) >= distanceToStop) {
+                //rb.velocity = transform.up * moveSpeed;
 
-            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            //move with rb instead
-            Vector2 temp = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            rb.MovePosition(temp);
+                transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                //move with rb instead
+                Vector2 temp = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                rb.MovePosition(temp);
+            }
+            else {
+                rb.velocity = Vector2.zero;
+            }
         }
     }
 
@@ -56,6 +65,7 @@ public class ShooterEnemy : Enemy {
         float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg - 90f;
         Quaternion quaternion = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.localRotation = Quaternion.Slerp(transform.localRotation, quaternion, rotateSpeed);
+        //gb_firePoint.GetComponent<Transform>().localRotation = Quaternion.Slerp(transform.localRotation, quaternion, rotateSpeed);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -71,7 +81,14 @@ public class ShooterEnemy : Enemy {
 
     private void Shoot() {
         if (timeToFire <= 0f) {
-            Debug.Log("Shoot");
+            Vector2 targetDirection = target.position - transform.position;
+            Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg);
+
+            bullet = Instantiate(bulletPrefab, gb_firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
+            bullet.GetComponent<Rigidbody2D>().AddForce(gb_firePoint.GetComponent<UnityEngine.Transform>().up, ForceMode2D.Impulse);
+
+            Destroy(bullet, 5f);
+
             timeToFire = fireRate;
         }
         else {
