@@ -9846,6 +9846,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3580215313235729332, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: m_SortingLayer
       value: 0
