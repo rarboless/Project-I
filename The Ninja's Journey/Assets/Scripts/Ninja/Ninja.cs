@@ -8,7 +8,7 @@ using UnityEditor;
 
 public class Ninja : MonoBehaviour {
     [Header("Moviment Ninja")]
-    [SerializeField] public float speed = 5f;
+    [SerializeField] public float speed;
     private Vector3 movement;
     private Vector2 mousePosition;
 
@@ -41,8 +41,9 @@ public class Ninja : MonoBehaviour {
     //[SerializeField] private CheckPoint checkPoint;
     //private CheckPointV2 checkPointV2;
 
+    public int health = 3;
+
     private GameMaster gm;
-    private Health healthScript;
     private Bow bowScript;
     private Shuriken shurikenScript;
 
@@ -55,9 +56,7 @@ public class Ninja : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        //speed = ChangeSpeedOnHealth(healthScript.GetHealth());
-        //speed = ChangeSpeedOnHealth(healthScript.health);
-        //speed = healthScript.ChangeSpeedOnHealth();
+        speed = ChangeSpeedOnHealth(health);
         MovementProcess();
     }
 
@@ -147,7 +146,7 @@ public class Ninja : MonoBehaviour {
         Destroy(this.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    /*
+    
     private float ChangeSpeedOnHealth(int health) {
         if(health == 2) {
             return 4f;
@@ -159,6 +158,6 @@ public class Ninja : MonoBehaviour {
             return 5f;
         }
     }
-    */
+    
 
 }

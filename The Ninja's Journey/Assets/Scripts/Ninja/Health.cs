@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
-    public int health = 3; //public -> Ninja uses
+    //public int health = 3; //public -> Ninja uses
 
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite fullHeart;
@@ -19,15 +19,11 @@ public class Health : MonoBehaviour {
 
     [SerializeField] private Skull enemy;
 
-    public int GetHealth() {
-        return health;
-    }
-
     private void Update() {
         foreach (Image heart in hearts) {
             heart.sprite = emptyHeart;
         }
-        for (int i = 0; i < health; i++) {
+        for (int i = 0; i < ninjaScript.health; i++) {
             hearts[i].sprite = fullHeart;
         }
         
@@ -40,9 +36,9 @@ public class Health : MonoBehaviour {
     }
 
     public void TakeDamage() {
-        health -= 1;
+        ninjaScript.health -= 1;
 
-        if (health <= 0) {
+        if (ninjaScript.health <= 0) {
             foreach (Image heart in hearts) {
                 heart.sprite = emptyHeart;
             }
@@ -51,8 +47,8 @@ public class Health : MonoBehaviour {
     }
 
     public void Heal() {
-        if (health < 3) {
-            health += 1;
+        if (ninjaScript.health < 3) {
+            ninjaScript.health += 1;
         }
     }
 
@@ -73,24 +69,11 @@ public class Health : MonoBehaviour {
 
 
     public void AddHealth(int value) {
-        if (health < 3) {
-            health += value;
+        if (ninjaScript.health < 3) {
+            ninjaScript.health += value;
         }
     }
-    /*
-    public float ChangeSpeedOnHealth() {
-        if (health == 2) {
-            return 4f;
-        }
-        else if (health == 1) {
-            return 3f;
-        }
-        else {
-            return 5f;
-        }
-    }
-    */
-
+    
     /*
     public void Respawn(Transform checkpointTransform) {
         AddHealth(3);
