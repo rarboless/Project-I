@@ -4,21 +4,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class FlameEnemy : Enemy {
-    [Header("Propietats principals")]
-    public Transform target;
-    public float chaseRadius;
-    public float attackRadius;
-    public Transform homePosition;
-
-    [Header("Moviment")]
-    private Vector3 movement;
-    private Animator animator;
-
-    [Header("Estadístiques")]
-    public int maxHealth = 3;
-    private int hits = 0;
-    public float moveSpeed;
-    private Rigidbody2D rb;
 
     [Header("Atac stuff")]
     [SerializeField] private GameObject firePoint;
@@ -81,19 +66,5 @@ public class FlameEnemy : Enemy {
         bullet.GetComponent<Rigidbody2D>().AddForce(direction.normalized * fireForce, ForceMode2D.Impulse);
 
         Destroy(bullet, 5f);
-    }
-
-    public void TakeDamage() {
-        maxHealth -= 1;
-        hits--;
-        if (maxHealth <= 0) {
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag("Bullet")) {
-            TakeDamage();
-        }
     }
 }
