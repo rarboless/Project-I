@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Ninja : MonoBehaviour {
     [Header("Moviment Ninja")]
-    [SerializeField] private float velocity;
+    [SerializeField] private float speed = 5f;
     private Vector3 movement;
     private Vector2 mousePosition;
 
@@ -36,8 +36,9 @@ public class Ninja : MonoBehaviour {
     //[SerializeField] private CheckPoint checkPoint;
     //private CheckPointV2 checkPointV2;
 
-
     private GameMaster gm;
+    private Health healthScript;
+
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -47,6 +48,7 @@ public class Ninja : MonoBehaviour {
     }
 
     void FixedUpdate() {
+        //speed = ChangeSpeedOnHealth(healthScript.GetHealth());
         MovementProcess();
     }
 
@@ -70,8 +72,7 @@ public class Ninja : MonoBehaviour {
             checkPoint.Reset();
         }
         */
-            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         weapon.GetComponent<Rigidbody2D>().rotation = aimAngle;
@@ -82,7 +83,7 @@ public class Ninja : MonoBehaviour {
         movement = inputScript.InputDetect();
 
         if(movement != Vector3.zero) {
-            rigidBody.MovePosition(transform.position + movement * velocity * Time.deltaTime);
+            rigidBody.MovePosition(transform.position + movement * speed * Time.deltaTime);
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
@@ -117,4 +118,16 @@ public class Ninja : MonoBehaviour {
         Destroy(this.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    private float ChangeSpeedOnHealth(int health) {
+        if(health == 2) {
+            return 4f;
+        }
+        else if(health == 1) {
+            return 3f;
+        }
+        else {
+            return 5f;
+        }
+    }
+
 }
