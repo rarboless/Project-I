@@ -78,6 +78,33 @@ public class Health : MonoBehaviour {
         }
     }
     /*
+    public float ChangeSpeedOnHealth() {
+        if (health == 2) {
+            return 4f;
+        }
+        else if (health == 1) {
+            return 3f;
+        }
+        else {
+            return 5f;
+        }
+    }
+    */
+    public void ChangeSpeedOnHealth2() {
+        if (health == 2) {
+            ninjaScript.speed = 4f;
+        }
+        else if (health == 1) {
+            ninjaScript.speed = 3f;
+        }
+        else {
+            ninjaScript.speed = 5f;
+        }
+    }
+
+
+
+    /*
     public void Respawn(Transform checkpointTransform) {
         AddHealth(3);
         ninja = Instantiate(ninjaPrefab, checkpointTransform.position, checkpointTransform.rotation);
