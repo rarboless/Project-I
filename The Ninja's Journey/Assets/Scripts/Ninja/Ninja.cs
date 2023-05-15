@@ -25,7 +25,6 @@ public class Ninja : MonoBehaviour {
 
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject weapon1;
-    [SerializeField] private string weaponType;
 
     [SerializeField] private float timeBetweenShots;
     private float timeOfLastShot;
@@ -58,7 +57,6 @@ public class Ninja : MonoBehaviour {
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
 
-        weaponType = "Bow";
     }
 
     void FixedUpdate() {
@@ -166,16 +164,17 @@ public class Ninja : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("WeaponPick")) {
+        if (collision.CompareTag("Shuriken")) {
+            weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
+            bulletPrefab = shurikenPrefab;
             Destroy(collision.gameObject);
-            if (collision.GetComponent<Weapons>().type.Equals("Shuriken") && !weaponType.Equals("Shuriken")) {
-                bulletPrefab = collision.GetComponent<Weapons>().bulletPrefab;
-                weapon1.GetComponent<SpriteRenderer>().sprite = collision.GetComponent<Weapons>().weaponSprite;
-            }
-            else if (collision.GetComponent<Weapons>().type.Equals("Bow") && !weaponType.Equals("Bow")) {
-                bulletPrefab = collision.GetComponent<Weapons>().bulletPrefab;
-                weapon1.GetComponent<SpriteRenderer>().sprite = collision.GetComponent<Weapons>().weaponSprite;
-            }
+            
+        }
+        if (collision.CompareTag("Bow")) {
+            weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
+            bulletPrefab = arrowPrefab;
+            Destroy(collision.gameObject);
+
         }
     }
 }
