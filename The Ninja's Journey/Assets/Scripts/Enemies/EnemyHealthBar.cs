@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealthBar : MonoBehaviour
-{
-
-    public Slider slider;
-    public Color low;
-    public Color high;
-    public Vector3 offset;
+public class EnemyHealthBar : MonoBehaviour {
+    [SerializeField] private Slider slider;
+    [SerializeField] private Color low;
+    [SerializeField] private Color high;
+    [SerializeField] private Vector3 offset;
 
     public void SetHealth(int health, int maxHealth) {
         slider.gameObject.SetActive(health < maxHealth);
@@ -20,8 +18,7 @@ public class EnemyHealthBar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         slider.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);
         
     }

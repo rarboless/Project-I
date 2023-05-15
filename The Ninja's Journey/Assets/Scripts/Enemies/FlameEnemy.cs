@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class FlameEnemy : Enemy {
-
-    [Header("Atac stuff")]
+    [Header("Propietats del Atac")]
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
@@ -22,6 +21,7 @@ public class FlameEnemy : Enemy {
 
     private void Update() {
         CheckDistance();
+
         if (Vector2.Distance(target.position, transform.position) <= attackRadius) {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
                 Shoot();

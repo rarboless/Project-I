@@ -22,11 +22,15 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private GameObject firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
+
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject weapon1;
+
     [SerializeField] private float timeBetweenShots;
     private float timeOfLastShot;
     private GameObject bullet;
+
+    [Header("Bales prefabs")]
     [SerializeField] private Sprite shurikenSprite;
     [SerializeField] private GameObject shurikenPrefab;
     [SerializeField] private Sprite bowSprite;
@@ -65,7 +69,7 @@ public class Ninja : MonoBehaviour {
             CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }
         if (Input.GetMouseButtonDown(1)) {
-            if(Time.time - timeOfLastShot >= timeBetweenShots) {
+            if (Time.time - timeOfLastShot >= timeBetweenShots) {
                 Shoot();
                 timeOfLastShot = Time.time;
             }
@@ -100,6 +104,7 @@ public class Ninja : MonoBehaviour {
             checkPoint.Reset();
         }
         */
+
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
@@ -110,7 +115,7 @@ public class Ninja : MonoBehaviour {
     void MovementProcess() {
         movement = inputScript.InputDetect();
 
-        if(movement != Vector3.zero) {
+        if (movement != Vector3.zero) {
             rigidBody.MovePosition(transform.position + movement * speed * Time.deltaTime);
 
             animator.SetFloat("moveX", movement.x);
@@ -148,7 +153,7 @@ public class Ninja : MonoBehaviour {
     }
     
     private float ChangeSpeedOnHealth() {
-        if(health == 2) {
+        if (health == 2) {
             return 4f;
         }
         else if(health == 1) {
@@ -158,6 +163,4 @@ public class Ninja : MonoBehaviour {
             return 5f;
         }
     }
-    
-
 }

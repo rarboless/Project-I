@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skull : Enemy
-{ 
+public class Skull : Enemy { 
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
