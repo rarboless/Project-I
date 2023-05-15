@@ -6,8 +6,9 @@ public class Weapons : MonoBehaviour {
     protected int damage;
     protected float fireForce;
     protected float timeBetweenShots;
-    protected string type;
 
-    [SerializeField] protected GameObject bulletPrefab;
-    [SerializeField] protected Sprite weaponSprite;
+    public string type;
+    
+    public GameObject bulletPrefab;
+    public Sprite weaponSprite;
 }

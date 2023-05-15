@@ -168,6 +168,14 @@ public class Ninja : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("WeaponPick")) {
             Destroy(collision.gameObject);
+            if (collision.GetComponent<Weapons>().type.Equals("Shuriken") && !weaponType.Equals("Shuriken")) {
+                bulletPrefab = collision.GetComponent<Weapons>().bulletPrefab;
+                weapon1.GetComponent<SpriteRenderer>().sprite = collision.GetComponent<Weapons>().weaponSprite;
+            }
+            else if (collision.GetComponent<Weapons>().type.Equals("Bow") && !weaponType.Equals("Bow")) {
+                bulletPrefab = collision.GetComponent<Weapons>().bulletPrefab;
+                weapon1.GetComponent<SpriteRenderer>().sprite = collision.GetComponent<Weapons>().weaponSprite;
+            }
         }
     }
 }

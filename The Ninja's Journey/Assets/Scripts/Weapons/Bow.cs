@@ -12,8 +12,6 @@ public class Bow : Weapons  {
         timeBetweenShots = 0.3f;
         arrowPrefab = Resources.Load<GameObject>("Assets / Prefabs / Arrow.prefab");
 
-        type = "Bow";
-
         bulletPrefab = arrowPrefab;
         weaponSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Assets/Sprites/Sprite.png");
     }
