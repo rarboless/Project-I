@@ -12,6 +12,7 @@ TagManager:
   - FlameBullet
   - Weapon
   - GameMaster
+  - WeaponPick
   layers:
   - Default
   - TransparentFX
