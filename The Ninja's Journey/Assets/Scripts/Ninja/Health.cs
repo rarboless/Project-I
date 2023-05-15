@@ -9,6 +9,7 @@ public class Health : MonoBehaviour {
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
     [SerializeField] private Ninja ninjaScript;
+    private int maxHealth = 3;
 
     private void Update() {
         foreach (Image heart in hearts) {
@@ -22,7 +23,7 @@ public class Health : MonoBehaviour {
             TakeDamage();
         }
         if (Input.GetKeyDown(KeyCode.X)) {
-            Heal();
+            AddHealth(1);
         }
     }
 
@@ -34,12 +35,6 @@ public class Health : MonoBehaviour {
                 heart.sprite = emptyHeart;
             }
             ninjaScript.Die();
-        }
-    }
-
-    public void Heal() {
-        if (ninjaScript.health < 3) {
-            ninjaScript.health += 1;
         }
     }
 
@@ -56,12 +51,27 @@ public class Health : MonoBehaviour {
             AddHealth(1);
             Destroy(collision.gameObject);
         }
+        else if (collision.CompareTag("AllHeal")) {
+            AddAllHealth();
+            Destroy(collision.gameObject);
+        }
     }
 
-
     public void AddHealth(int value) {
-        if (ninjaScript.health < 3) {
+        if(ninjaScript.health < 3) {
             ninjaScript.health += value;
         }
+    }
+    public void AddAllHealth() {
+        if (HealthRemaining() == 1) {
+            ninjaScript.health += 1;
+        }
+        else if (HealthRemaining() == 2) {
+            ninjaScript.health += 2;
+        }
+    }
+
+    public int HealthRemaining() {
+        return maxHealth - ninjaScript.health;
     }
 }

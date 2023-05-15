@@ -15,6 +15,7 @@ TagManager:
   - WeaponPick
   - Shuriken
   - Bow
+  - AllHeal
   layers:
   - Default
   - TransparentFX
