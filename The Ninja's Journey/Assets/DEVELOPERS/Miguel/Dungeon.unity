@@ -315,13 +315,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Skull
   baseAttack: 1
-  moveSpeed: 2
   target: {fileID: 1791070807}
   chaseRadius: 6
   attackRadius: 0
   homePosition: {fileID: 1241334451}
   maxHealth: 3
   healthBar: {fileID: 2052688932}
+  moveSpeed: 2
 --- !u!61 &318164617
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10070,17 +10070,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3733503870970650035, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
   m_PrefabInstance: {fileID: 1791070806}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1791070808 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3733503870970649992, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
-  m_PrefabInstance: {fileID: 1791070806}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791070809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df003c6efc6a02448bcc0430e86319ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1791070809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3733503870970650045, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
@@ -10105,7 +10094,10 @@ MonoBehaviour:
   - {fileID: 1011520140}
   fullHeart: {fileID: -1518854399, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
   emptyHeart: {fileID: -2003610257, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
-  ninja: {fileID: 1791070808}
+  ninjaScript: {fileID: 0}
+  ninjaPrefab: {fileID: 0}
+  vcam: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!114 &1791070811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10459,7 +10451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125708327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24, y: 0.27, z: 0.22357982}
+  m_LocalPosition: {x: -0.06, y: 1.76, z: 0.22357982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10535,11 +10527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.8258095
+      value: -14.280001
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.886736
+      value: 4.63
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -10571,9 +10563,9 @@ GameObject:
   - component: {fileID: 2143628108}
   - component: {fileID: 2143628107}
   m_Layer: 0
-  m_Name: ExteriorChangeScene
+  m_Name: UpAFloor
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10606,7 +10598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6946ca67150234db9cfba0e0cbe225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 0
+  sceneBuildIndex: 6
   img: {fileID: 897965015}
   fadeCurve:
     serializedVersion: 2
@@ -10632,7 +10624,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  connection: {fileID: 11400000, guid: 8f74d20d36e866440bfb6c5edd9a8b21, type: 2}
+  connection: {fileID: 11400000, guid: 2e4d3fb695394774997397e5b26823eb, type: 2}
   spawnPoint: {fileID: 2125708328}
 --- !u!61 &2143628108
 BoxCollider2D:
@@ -10647,7 +10639,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.27938437}
+  m_Offset: {x: 0, y: 0.4075427}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10658,5 +10650,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5587687}
+  m_Size: {x: 1, y: 1.1418753}
   m_EdgeRadius: 0
