@@ -13,6 +13,7 @@ TagManager:
   - Weapon
   - GameMaster
   - WeaponPick
+  - Shuriken
   layers:
   - Default
   - TransparentFX
