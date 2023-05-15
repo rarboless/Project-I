@@ -11,5 +11,6 @@ public class CoinHUD : MonoBehaviour
 
     public void Update() {
         pointsHUD.text = gmScript.points.ToString(); 
+        //pointsHUD.text = gmScript.TotalPoints.ToString(); 
     }
 }
