@@ -184,6 +184,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2143628106}
+  - {fileID: 322935301}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -580,14 +581,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322935298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.5495815, y: -9.786159, z: -0.66624004}
+  m_LocalPosition: {x: -5, y: -5, z: -1.0240662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838622292}
   - {fileID: 592954177}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 45777720}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &331372444
 GameObject:
@@ -1314,7 +1315,7 @@ RectTransform:
   m_Children:
   - {fileID: 897965014}
   m_Father: {fileID: 2143628106}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1382,37 +1383,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1289204386
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1289204387}
-  m_Layer: 0
-  m_Name: SpawnF2-F1
-  m_TagString: Untagged
-  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1289204387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289204386}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.91, y: 7.09, z: 2.1325135}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2143628106}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1521887501
 GameObject:
   m_ObjectHideFlags: 0
@@ -37419,11 +37389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650035, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.42
+      value: -6.37
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650035, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.41
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 3733503870970650035, guid: a5dd572d94675c34fb87df58992b2262, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37499,6 +37469,7 @@ MonoBehaviour:
   ninjaScript: {fileID: 0}
   ninjaPrefab: {fileID: 0}
   vcam: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!114 &1791070811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37961,11 +37932,11 @@ PrefabInstance:
       objectReference: {fileID: 1791070807}
     - target: {fileID: 3873141254235834679, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.09
+      value: -14.04
       objectReference: {fileID: 0}
     - target: {fileID: 3873141254235834679, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4899998
+      value: -3.32
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255284151376, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -38117,11 +38088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.09
+      value: -14.04
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4899998
+      value: -3.32
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -38155,7 +38126,7 @@ GameObject:
   m_Layer: 0
   m_Name: DownFloor
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -38167,11 +38138,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143628105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: -5, z: -1.0240662}
+  m_LocalPosition: {x: -5.97, y: 2.1, z: -0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1289204387}
   - {fileID: 1272045602}
   m_Father: {fileID: 45777720}
   m_RootOrder: 0
@@ -38188,7 +38158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6946ca67150234db9cfba0e0cbe225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 0
+  sceneBuildIndex: 7
   img: {fileID: 897965015}
   fadeCurve:
     serializedVersion: 2
@@ -38214,8 +38184,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  connection: {fileID: 11400000, guid: 8f74d20d36e866440bfb6c5edd9a8b21, type: 2}
-  spawnPoint: {fileID: 2143628106}
+  connection: {fileID: 11400000, guid: 2e4d3fb695394774997397e5b26823eb, type: 2}
+  spawnPoint: {fileID: 0}
 --- !u!61 &2143628108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38229,7 +38199,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.27938437}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -38240,5 +38210,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5587687}
+  m_Size: {x: 1, y: 1.3}
   m_EdgeRadius: 0
