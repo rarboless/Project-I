@@ -11,6 +11,8 @@ public class Shuriken : Weapons {
         fireForce = 20f;
         timeBetweenShots = 0.3f;
         shurikenPrefab = Resources.Load<GameObject>("Assets/Prefabs/Shuriken.prefab");
+
+        type = "Shuriken";
         
         bulletPrefab = shurikenPrefab;
         weaponSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Assets/Sprites/Shuriken.png");

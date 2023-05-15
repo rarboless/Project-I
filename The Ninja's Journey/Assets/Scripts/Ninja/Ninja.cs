@@ -25,6 +25,7 @@ public class Ninja : MonoBehaviour {
 
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject weapon1;
+    [SerializeField] private string weaponType;
 
     [SerializeField] private float timeBetweenShots;
     private float timeOfLastShot;
@@ -41,7 +42,6 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
-    //[HideInInspector] public bool dead = false;
     //[SerializeField] private CheckPoint checkPoint;
     //private CheckPointV2 checkPointV2;
 
@@ -57,6 +57,8 @@ public class Ninja : MonoBehaviour {
         animator = GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
+
+        weaponType = "Bow";
     }
 
     void FixedUpdate() {
@@ -143,7 +145,6 @@ public class Ninja : MonoBehaviour {
     public void Die() {
         animator.SetBool("isDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
-        //dead = true;
         Invoke("Respawn", 2f);
     }
 
@@ -161,6 +162,12 @@ public class Ninja : MonoBehaviour {
         }
         else {
             return 5f;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("WeaponPick")) {
+            Destroy(collision.gameObject);
         }
     }
 }
