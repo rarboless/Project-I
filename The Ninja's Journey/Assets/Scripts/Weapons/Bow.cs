@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bow : Weapons  {
     private GameObject arrowPrefab;
 
-    void Start() {
+    /*void Start() {
         damage = 2;
         fireForce = 20f;
         timeBetweenShots = 0.75f;
@@ -14,5 +14,5 @@ public class Bow : Weapons  {
 
         bulletPrefab = arrowPrefab;
         weaponSprite.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Assets/Sprites/Sprite.png");
-    }
+    }*/
 }

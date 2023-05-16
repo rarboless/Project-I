@@ -14,10 +14,12 @@ public class Enemy : MonoBehaviour {
     protected Animator animator;
 
     [Header("Estadístiques")]
-    [SerializeField] protected int maxHealth;
+    [SerializeField] protected float maxHealth;
     [SerializeField] protected float moveSpeed;
-    protected int hits = 0;
+
     protected Rigidbody2D rb;
+
+    protected BulletScript bs;
 
     void Start() {
         
@@ -28,8 +30,8 @@ public class Enemy : MonoBehaviour {
     }
 
     protected void TakeDamage() {
-        maxHealth -= 1;
-        hits--;
+        maxHealth -= bs.damage;
+
         if (maxHealth <= 0) {
             Destroy(gameObject);
         }
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour {
 
     protected void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.CompareTag("Bullet")) {
+            bs = collision.collider.GetComponent<BulletScript>();
             TakeDamage();
         }
     }
