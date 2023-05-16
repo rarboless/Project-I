@@ -2025,15 +2025,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df003c6efc6a02448bcc0430e86319ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
+  speed: 0
   inputScript: {fileID: 1012647193}
   firePoint: {fileID: 667953479}
   bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
   fireForce: 20
   weapon: {fileID: 1997067879}
+  weapon1: {fileID: 0}
+  timeBetweenShots: 0
+  shurikenSprite: {fileID: 0}
+  shurikenPrefab: {fileID: 0}
+  bowSprite: {fileID: 0}
+  arrowPrefab: {fileID: 0}
   shakeIntensity: 5
   shakeFrequency: 5
   shakeTime: 0.5
+  health: 3
 --- !u!95 &1012647192
 Animator:
   serializedVersion: 5
@@ -5971,6 +5978,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2606944938685703416, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606944938685703416, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606944938685703416, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606944938685703416, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606944938685703416, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606944938685703416, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606944938685703416, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2606944939178072601, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.71
