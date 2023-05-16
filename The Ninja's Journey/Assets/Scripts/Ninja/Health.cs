@@ -18,13 +18,6 @@ public class Health : MonoBehaviour {
         for (int i = 0; i < ninjaScript.health; i++) {
             hearts[i].sprite = fullHeart;
         }
-        
-        if (Input.GetKeyDown(KeyCode.Z)) {
-            TakeDamage();
-        }
-        if (Input.GetKeyDown(KeyCode.X)) {
-            AddHealth(1);
-        }
     }
 
     public void TakeDamage() {

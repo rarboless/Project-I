@@ -75,36 +75,6 @@ public class Ninja : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R)) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        if (Input.GetKeyDown(KeyCode.M)) {
-            //Manera Dolenta pero funciona (S'ha de passar manualment al script els sprites i gameObjects)
-            weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
-            bulletPrefab = shurikenPrefab;
-
-            //Manera bona pero no funciona (Script amb Path dels archis)
-            //weapon1.GetComponent<SpriteRenderer>().sprite = shurikenScript.weaponSprite;
-            //bulletPrefab = shurikenScript.shurikenPrefab;
-
-        }
-        if (Input.GetKeyDown(KeyCode.N)) {
-            //Manera Dolenta pero funciona (S'ha de passar manualment al script els sprites i gameObjects)
-            weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
-            bulletPrefab = arrowPrefab;
-
-            //Manera bona pero no funciona (Script amb Path dels archis)
-            //weapon1.GetComponent<SpriteRenderer>().sprite = bowScript.weaponSprite;
-            //bulletPrefab = bowScript.arrowPrefab;
-        }
-        /*
-        if (Input.GetKeyDown(KeyCode.R)) {
-            Destroy(this.gameObject);
-            checkPoint.Reset();
-        }
-        */
-
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
@@ -171,6 +141,9 @@ public class Ninja : MonoBehaviour {
             
         }
         if (collision.CompareTag("Bow")) {
+            //Manera bona pero no funciona (Script amb Path dels archis)
+            //weapon1.GetComponent<SpriteRenderer>().sprite = bowScript.weaponSprite;
+            //bulletPrefab = bowScript.arrowPrefab;
             weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
             bulletPrefab = arrowPrefab;
             Destroy(collision.gameObject);
