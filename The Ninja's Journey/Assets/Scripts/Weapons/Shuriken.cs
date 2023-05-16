@@ -8,7 +8,7 @@ public class Shuriken : Weapons {
 
     void Start() {
         damage = 1;
-        fireForce = 20f;
+        fireForce = 10f;
         timeBetweenShots = 0.3f;
         shurikenPrefab = Resources.Load<GameObject>("Assets/Prefabs/Shuriken.prefab");
         
