@@ -281,11 +281,9 @@ GameObject:
   - component: {fileID: 3580215313235729335}
   - component: {fileID: 3580215313235729334}
   - component: {fileID: 3580215313235729336}
-  - component: {fileID: 3580215313235729329}
   - component: {fileID: 3580215313235729331}
   - component: {fileID: 3580215313235729294}
   - component: {fileID: 6575481434961628670}
-  - component: {fileID: 6575481434961628646}
   m_Layer: 6
   m_Name: Ninja 1
   m_TagString: Player
@@ -430,27 +428,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3580215313235729329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3580215313235729339}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd11fbec013008c49ab25e4c690142a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 0
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  fireForce: 0
-  weapon: {fileID: 0}
-  inputScript: {fileID: 0}
-  shakeIntensity: 0
-  shakeFrequency: 0
-  shakeTime: 0
 --- !u!114 &3580215313235729331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,15 +487,3 @@ MonoBehaviour:
   fullHeart: {fileID: -1518854399, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
   emptyHeart: {fileID: -2003610257, guid: 1f32988ada6a62143bab48b84e372f0b, type: 3}
   ninjaScript: {fileID: 3580215313235729294}
---- !u!114 &6575481434961628646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3580215313235729339}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87cf0f6588d87c343ac95dc4fcc91485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

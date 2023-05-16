@@ -41,9 +41,6 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
-    //[SerializeField] private CheckPoint checkPoint;
-    //private CheckPointV2 checkPointV2;
-
     public int health = 3;
 
     private GameMaster gm;
@@ -55,8 +52,6 @@ public class Ninja : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-        transform.position = gm.lastCheckPointPos;
-
     }
 
     void FixedUpdate() {

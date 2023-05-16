@@ -1,5 +1,4 @@
 /*
-    - Els checkpoints ara són visibles (fletxes blaves) perque sigui visible a la entrega, més endavant seràn invisibles i tindràn un icon per saber on són.
     - Quan el personatge perd vida, disminueix la seva velocitat de moviment.
     - Hi han monedes en el mapa per recol·lectar.
     - A més de les monedes com a pick-ups, també tenim picks ups curatius, fa que puguis recuperar una vida o tota depenent de la mida del cor.
