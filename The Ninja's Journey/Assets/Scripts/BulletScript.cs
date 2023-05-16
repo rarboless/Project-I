@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
+    [SerializeField] public float damage;
+    [SerializeField] private float fireForce;
+    [SerializeField] private float timeBetweenShots;
+
 
     // Start is called before the first frame update
     void Start() {

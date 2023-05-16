@@ -47,8 +47,8 @@ public class Ninja : MonoBehaviour {
     public int health = 3;
 
     private GameMaster gm;
-    private Bow bowScript;
-    private Shuriken shurikenScript;
+    //private Bow bowScript;
+    //private Shuriken shurikenScript;
 
 
     void Start() {
@@ -147,7 +147,6 @@ public class Ninja : MonoBehaviour {
             weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
             bulletPrefab = arrowPrefab;
             Destroy(collision.gameObject);
-
         }
     }
 }

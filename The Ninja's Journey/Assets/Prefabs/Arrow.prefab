@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19fae699b1ed0448af6ad35e8dacc48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 2
+  fireForce: 20
+  timeBetweenShots: 0.75
 --- !u!50 &7275737658662229175
 Rigidbody2D:
   serializedVersion: 4
