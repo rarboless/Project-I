@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapons : MonoBehaviour {
-    protected int damage;
+    protected float damage;
     protected float fireForce;
     protected float timeBetweenShots;
 
