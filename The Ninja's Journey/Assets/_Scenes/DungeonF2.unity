@@ -644,11 +644,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6834297
+      value: -3.6813173
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5223262
+      value: 1.5222583
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
@@ -832,6 +832,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1954016392}
     m_Modifications:
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: bowSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 592c7554ceaec8b439dd4a45d930f8dc, type: 3}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: shurikenPrefab
+      value: 
+      objectReference: {fileID: 5592070955082474733, guid: 211bf012084ed4b498b2860a42ae37b4, type: 3}
+    - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
+      propertyPath: shurikenSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 105d3d5aa7b6cf34b905bcbacba6d932, type: 3}
     - target: {fileID: 3580215313235729333, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: m_RootOrder
       value: 0

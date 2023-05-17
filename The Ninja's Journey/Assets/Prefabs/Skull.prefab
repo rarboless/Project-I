@@ -173,4 +173,4 @@ MonoBehaviour:
   attackRadius: 0
   homePosition: {fileID: 0}
   maxHealth: 5
-  moveSpeed: 2
+  moveSpeed: 3

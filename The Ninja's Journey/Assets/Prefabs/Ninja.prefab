@@ -281,7 +281,6 @@ GameObject:
   - component: {fileID: 3733503870970650033}
   - component: {fileID: 3733503870970650032}
   - component: {fileID: 3733503870970650046}
-  - component: {fileID: 3733503870970650039}
   - component: {fileID: 3733503870970650037}
   - component: {fileID: 3733503870970649992}
   - component: {fileID: -6416514566254812884}
@@ -429,27 +428,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3733503870970650039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3733503870970650045}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd11fbec013008c49ab25e4c690142a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 0
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  fireForce: 0
-  weapon: {fileID: 0}
-  inputScript: {fileID: 0}
-  shakeIntensity: 0
-  shakeFrequency: 0
-  shakeTime: 0
 --- !u!114 &3733503870970650037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,18 +452,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df003c6efc6a02448bcc0430e86319ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
+  speed: 0
   inputScript: {fileID: 3733503870970650037}
   firePoint: {fileID: 3733503870460838923}
   bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
   fireForce: 20
   weapon: {fileID: 3733503869619970332}
+  weapon1: {fileID: 0}
   timeBetweenShots: 0.28
+  shurikenSprite: {fileID: 0}
+  shurikenPrefab: {fileID: 0}
+  bowSprite: {fileID: 0}
+  arrowPrefab: {fileID: 0}
   shakeIntensity: 5
   shakeFrequency: 5
   shakeTime: 0.5
-  dead: 0
-  checkPoint: {fileID: 0}
+  health: 3
 --- !u!114 &-6416514566254812884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,11 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78db019e22af33b4284bcf6e3cb22b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   hearts: []
   fullHeart: {fileID: 0}
   emptyHeart: {fileID: 0}
   ninjaScript: {fileID: 0}
-  ninjaPrefab: {fileID: 0}
-  vcam: {fileID: 0}
-  enemy: {fileID: 0}
