@@ -460,7 +460,7 @@ PrefabInstance:
     - target: {fileID: 2606944940333449816, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: connection
       value: 
-      objectReference: {fileID: 11400000, guid: 44ade846cc3d00c4a8196eb0b6c39305, type: 2}
+      objectReference: {fileID: 11400000, guid: ada671c4131f0484081aa2b77dac16ee, type: 2}
     - target: {fileID: 2606944940333449816, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -8861,11 +8861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9058614
+      value: -5.9058623
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.4723842
+      value: 2.472391
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
