@@ -17,6 +17,10 @@ public class Enemy : MonoBehaviour {
     [SerializeField] protected float maxHealth;
     [SerializeField] protected float moveSpeed;
 
+    [Header("SFX")]
+    public AudioClip hitSFX;
+    public AudioClip dieSFX;
+
     protected Rigidbody2D rb;
 
     protected BulletScript bs;
@@ -31,8 +35,10 @@ public class Enemy : MonoBehaviour {
 
     protected void TakeDamage() {
         maxHealth -= bs.damage;
+        AudioManager.Instance.PlaySound(hitSFX);
 
         if (maxHealth <= 0) {
+            AudioManager.Instance.PlaySound(dieSFX);
             Destroy(gameObject);
         }
     }

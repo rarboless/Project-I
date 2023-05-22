@@ -35,23 +35,23 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private GameObject shurikenPrefab;
     [SerializeField] private Sprite bowSprite;
     [SerializeField] private GameObject arrowPrefab;
-    public AudioClip pickWeaponSFX;
-
 
     [Header("Camera Shake")]
     [SerializeField] private float shakeIntensity;
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
-    [Header("Others")]
+    [Header("SFX")]
+    public AudioClip pickWeaponSFX;
     public AudioClip healSFX;
+    public AudioClip hitSFX;
+    public AudioClip dieSFX;
+    public AudioClip bulletSFX;
+
     public int health = 3;
     private GameMaster gm;
     //private Bow bowScript;
     //private Shuriken shurikenScript;
-
-
-
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -107,12 +107,15 @@ public class Ninja : MonoBehaviour {
         bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
 
+        AudioManager.Instance.PlaySound(bulletSFX);
+
         Destroy(bullet, 5f);
     }
 
     public void Die() {
         animator.SetBool("isDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+        AudioManager.Instance.PlaySound(dieSFX);
         Invoke("Respawn", 2f);
     }
 

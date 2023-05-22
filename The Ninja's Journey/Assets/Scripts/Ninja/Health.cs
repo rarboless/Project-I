@@ -22,6 +22,7 @@ public class Health : MonoBehaviour {
 
     public void TakeDamage() {
         ninjaScript.health -= 1;
+        AudioManager.Instance.PlaySound(ninjaScript.hitSFX);
 
         if (ninjaScript.health <= 0) {
             foreach (Image heart in hearts) {
