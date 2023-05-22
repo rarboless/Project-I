@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
-    [SerializeField] private string scene;
+    [SerializeField] private int sceneBuildIndex;
     [SerializeField] ChangeScene changeScene;
 
     // Start is called before the first frame update
@@ -17,8 +18,8 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void Play() {
-        scene = "Exterior";
-        changeScene.FadeTo(scene);
+        sceneBuildIndex = 0;
+        SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
     }
 
     public void Levels() {
