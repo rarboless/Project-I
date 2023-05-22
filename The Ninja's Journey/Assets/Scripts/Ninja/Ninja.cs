@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 
 public class Ninja : MonoBehaviour {
-    [Header("Moviment Ninja")]
+    [Header("Movement Ninja")]
     [SerializeField] public float speed;
     private Vector3 movement;
     private Vector2 mousePosition;
@@ -15,7 +15,7 @@ public class Ninja : MonoBehaviour {
     private Rigidbody2D rigidBody;
     private Animator animator;
 
-    [Header("Scripts funcionals")]
+    [Header("Scripts")]
     [SerializeField] private InputScript inputScript;
 
     [Header("Atac")]
@@ -30,22 +30,26 @@ public class Ninja : MonoBehaviour {
     private float timeOfLastShot;
     private GameObject bullet;
 
-    [Header("Bales prefabs")]
+    [Header("Bullet prefabs")]
     [SerializeField] private Sprite shurikenSprite;
     [SerializeField] private GameObject shurikenPrefab;
     [SerializeField] private Sprite bowSprite;
     [SerializeField] private GameObject arrowPrefab;
+    public AudioClip pickWeaponSFX;
+
 
     [Header("Camera Shake")]
     [SerializeField] private float shakeIntensity;
     [SerializeField] private float shakeFrequency;
     [SerializeField] private float shakeTime;
 
+    [Header("Others")]
     public int health = 3;
-
     private GameMaster gm;
     //private Bow bowScript;
     //private Shuriken shurikenScript;
+
+
 
 
     void Start() {
@@ -133,7 +137,8 @@ public class Ninja : MonoBehaviour {
             weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
             bulletPrefab = shurikenPrefab;
             Destroy(collision.gameObject);
-            
+            AudioManager.Instance.PlaySound(pickWeaponSFX);
+
         }
         if (collision.CompareTag("Bow")) {
             //Manera bona pero no funciona (Script amb Path dels archis)
@@ -142,6 +147,7 @@ public class Ninja : MonoBehaviour {
             weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
             bulletPrefab = arrowPrefab;
             Destroy(collision.gameObject);
+            AudioManager.Instance.PlaySound(pickWeaponSFX);
         }
     }
 }

@@ -464,6 +464,7 @@ MonoBehaviour:
   shurikenPrefab: {fileID: 0}
   bowSprite: {fileID: 0}
   arrowPrefab: {fileID: 0}
+  pickWeaponSFX: {fileID: 8300000, guid: 776deace9642deb46a904df0b9f14d99, type: 3}
   shakeIntensity: 5
   shakeFrequency: 5
   shakeTime: 0.5
