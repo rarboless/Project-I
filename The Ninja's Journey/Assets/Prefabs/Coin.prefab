@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 1
   gm: {fileID: 0}
+  coinSFX: {fileID: 8300000, guid: d8e5d7edea786684cb94aee0881c7e56, type: 3}
