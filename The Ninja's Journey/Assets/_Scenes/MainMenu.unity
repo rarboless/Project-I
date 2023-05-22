@@ -520,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608548681
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7423c6a55c03a438a5ee9eb0d54379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelSelector: LevelSelector
+  scene: 
   changeScene: {fileID: 0}
 --- !u!4 &1902899844
 Transform:
@@ -1803,6 +1803,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 844216196281729724, guid: f90ffa3824f635042831ff497027fb15, type: 3}
+      propertyPath: cursorTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: cd13680d9e5f425469fe747b559db1bf, type: 3}
     - target: {fileID: 844216196281729725, guid: f90ffa3824f635042831ff497027fb15, type: 3}
       propertyPath: m_Name
       value: CursorManager
