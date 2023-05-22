@@ -1535,12 +1535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7423c6a55c03a438a5ee9eb0d54379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   scene: 
   changeScene: {fileID: 0}
-=======
-  sceneBuildIndex: 0
->>>>>>> Stashed changes
 --- !u!4 &1902899844
 Transform:
   m_ObjectHideFlags: 0
