@@ -43,10 +43,12 @@ public class Health : MonoBehaviour {
         if (collision.CompareTag("Heal")) {
             AddHealth(1);
             Destroy(collision.gameObject);
+            AudioManager.Instance.PlaySound(ninjaScript.healSFX);
         }
         else if (collision.CompareTag("AllHeal")) {
             AddAllHealth();
             Destroy(collision.gameObject);
+            AudioManager.Instance.PlaySound(ninjaScript.healSFX);
         }
     }
 

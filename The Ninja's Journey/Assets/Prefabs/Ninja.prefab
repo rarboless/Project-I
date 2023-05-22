@@ -460,14 +460,15 @@ MonoBehaviour:
   weapon: {fileID: 3580215312419301146}
   weapon1: {fileID: 3580215312206258240}
   timeBetweenShots: 0.28
-  shurikenSprite: {fileID: 0}
-  shurikenPrefab: {fileID: 0}
-  bowSprite: {fileID: 0}
-  arrowPrefab: {fileID: 0}
+  shurikenSprite: {fileID: 21300000, guid: 105d3d5aa7b6cf34b905bcbacba6d932, type: 3}
+  shurikenPrefab: {fileID: 1511467419514561221, guid: ad782d88eaaf49b4a83cb70adb18f716, type: 3}
+  bowSprite: {fileID: 21300000, guid: 592c7554ceaec8b439dd4a45d930f8dc, type: 3}
+  arrowPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
   pickWeaponSFX: {fileID: 8300000, guid: 776deace9642deb46a904df0b9f14d99, type: 3}
   shakeIntensity: 5
   shakeFrequency: 5
   shakeTime: 0.5
+  healSFX: {fileID: 8300000, guid: bc7cdb538e7129648b5a5588fdc99e6b, type: 3}
   health: 3
 --- !u!114 &6575481434961628670
 MonoBehaviour:

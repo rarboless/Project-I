@@ -44,6 +44,7 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private float shakeTime;
 
     [Header("Others")]
+    public AudioClip healSFX;
     public int health = 3;
     private GameMaster gm;
     //private Bow bowScript;
