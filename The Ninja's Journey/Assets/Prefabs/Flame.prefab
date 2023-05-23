@@ -154,8 +154,7 @@ MonoBehaviour:
   homePosition: {fileID: 0}
   maxHealth: 3
   moveSpeed: 2
-  hitSFX: {fileID: 8300000, guid: 5ca6b8df196751645b89e5e30152d387, type: 3}
-  dieSFX: {fileID: 8300000, guid: a09358c42c15f564482e4992a49b9e51, type: 3}
+  hitSFX: {fileID: 8300000, guid: ccfdbc5e98847ff4891a2a1a5773fcff, type: 3}
   firePoint: {fileID: 6161520818234364200}
   bulletPrefab: {fileID: 5954288518613201371, guid: 99a61442b3351cb418b14fe10e3067bc, type: 3}
   fireForce: 5

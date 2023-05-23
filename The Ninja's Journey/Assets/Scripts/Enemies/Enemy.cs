@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour {
 
     [Header("SFX")]
     public AudioClip hitSFX;
-    public AudioClip dieSFX;
 
     protected Rigidbody2D rb;
 
@@ -35,12 +34,11 @@ public class Enemy : MonoBehaviour {
 
     protected void TakeDamage() {
         if (maxHealth <= 0) {
-            SoundManager.Instance.PlaySound(dieSFX);
             Destroy(gameObject);
         }else if (maxHealth > 0) {
             maxHealth -= bs.damage;
-            SoundManager.Instance.PlaySound(hitSFX);
         }
+        SoundManager.Instance.PlaySound(hitSFX);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision) {
