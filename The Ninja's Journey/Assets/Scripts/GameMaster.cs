@@ -12,6 +12,8 @@ public class GameMaster : MonoBehaviour
 
     void Awake() {
         health = 3;
+        points = 0;
+
         if (instance == null) {
             instance = this;
             DontDestroyOnLoad(instance);

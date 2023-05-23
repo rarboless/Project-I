@@ -5,6 +5,7 @@ using Cinemachine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEditor.Timeline.Actions;
 
 public class Ninja : MonoBehaviour {
     [Header("Movement Ninja")]
@@ -136,6 +137,7 @@ public class Ninja : MonoBehaviour {
 
     private void Respawn() {
         Destroy(this.gameObject);
+        gm.health = 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
