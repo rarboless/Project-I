@@ -53,6 +53,18 @@ public class Ninja : MonoBehaviour {
     //private Bow bowScript;
     //private Shuriken shurikenScript;
 
+    public static Ninja instance;
+
+    private void Awake() {
+        if(instance != null) {
+            Destroy(gameObject);
+        }
+        else {
+            instance = this;
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();

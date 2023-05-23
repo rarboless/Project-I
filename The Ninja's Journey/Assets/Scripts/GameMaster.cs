@@ -7,6 +7,7 @@ public class GameMaster : MonoBehaviour
     private static GameMaster instance;
     public int TotalPoints { get { return TotalPoints; } }
     public int points;
+    public int health;
 
 
     void Awake() {
