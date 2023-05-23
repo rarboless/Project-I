@@ -8,11 +8,13 @@ public class GameMaster : MonoBehaviour
     public int TotalPoints { get { return TotalPoints; } }
     public int points;
     public int health;
+    public int currentWeapon;
 
 
     void Awake() {
         health = 3;
         points = 0;
+        currentWeapon = 0;
 
         if (instance == null) {
             instance = this;

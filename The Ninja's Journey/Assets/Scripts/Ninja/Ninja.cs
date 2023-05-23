@@ -81,6 +81,8 @@ public class Ninja : MonoBehaviour {
 
     private void Update() {
         this.health = gm.health;
+        Weapon();
+
         if (Input.GetMouseButtonDown(0)) {
             CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }
@@ -155,20 +157,28 @@ public class Ninja : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Shuriken")) {
-            weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
-            bulletPrefab = shurikenPrefab;
+            gm.currentWeapon = 1;
             Destroy(collision.gameObject);
-                SoundManager.Instance.PlaySound(pickWeaponSFX);
+            SoundManager.Instance.PlaySound(pickWeaponSFX);
 
         }
         if (collision.CompareTag("Bow")) {
             //Manera bona pero no funciona (Script amb Path dels archis)
             //weapon1.GetComponent<SpriteRenderer>().sprite = bowScript.weaponSprite;
             //bulletPrefab = bowScript.arrowPrefab;
-            weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
-            bulletPrefab = arrowPrefab;
+            gm.currentWeapon = 0;
             Destroy(collision.gameObject);
             SoundManager.Instance.PlaySound(pickWeaponSFX);
+        }
+    }
+
+    private void Weapon() {
+        if(gm.currentWeapon == 1) {
+            weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
+            bulletPrefab = shurikenPrefab;
+        }else if(gm.currentWeapon == 0) {
+            weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
+            bulletPrefab = arrowPrefab;
         }
     }
 }
