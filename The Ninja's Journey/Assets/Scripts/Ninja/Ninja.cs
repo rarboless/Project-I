@@ -79,6 +79,7 @@ public class Ninja : MonoBehaviour {
     }
 
     private void Update() {
+        this.health = gm.health;
         if (Input.GetMouseButtonDown(0)) {
             CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }

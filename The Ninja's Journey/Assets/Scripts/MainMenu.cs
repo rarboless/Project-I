@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void Play() {
-        sceneBuildIndex = 0;
+        sceneBuildIndex = 3;
         SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
     }
 

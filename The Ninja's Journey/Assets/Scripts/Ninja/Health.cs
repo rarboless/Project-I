@@ -9,22 +9,27 @@ public class Health : MonoBehaviour {
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
     [SerializeField] private Ninja ninjaScript;
+    private GameMaster gm;
     private int maxHealth = 3;
+
+    void Start () {
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+    }
 
     private void Update() {
         foreach (Image heart in hearts) {
             heart.sprite = emptyHeart;
         }
-        for (int i = 0; i < ninjaScript.health; i++) {
+        for (int i = 0; i < gm.health; i++) {
             hearts[i].sprite = fullHeart;
         }
     }
 
     public void TakeDamage() {
-        ninjaScript.health -= 1;
+        gm.health -= 1;
         SoundManager.Instance.PlaySound(ninjaScript.hitSFX);
 
-        if (ninjaScript.health <= 0) {
+        if (gm.health <= 0) {
             foreach (Image heart in hearts) {
                 heart.sprite = emptyHeart;
             }
@@ -54,20 +59,20 @@ public class Health : MonoBehaviour {
     }
 
     public void AddHealth(int value) {
-        if(ninjaScript.health < 3) {
-            ninjaScript.health += value;
+        if(gm.health < 3) {
+            gm.health += value;
         }
     }
     public void AddAllHealth() {
         if (HealthRemaining() == 1) {
-            ninjaScript.health += 1;
+            gm.health += 1;
         }
         else if (HealthRemaining() == 2) {
-            ninjaScript.health += 2;
+            gm.health += 2;
         }
     }
 
     public int HealthRemaining() {
-        return maxHealth - ninjaScript.health;
+        return maxHealth - gm.health;
     }
 }
