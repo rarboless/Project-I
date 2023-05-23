@@ -127,6 +127,7 @@ public class Ninja : MonoBehaviour {
     private void Respawn() {
         Destroy(this.gameObject);
         gm.health = 3;
+        gm.points = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
