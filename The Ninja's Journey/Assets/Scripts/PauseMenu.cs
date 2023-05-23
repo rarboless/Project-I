@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
     [SerializeField] private GameObject pausePanel;
@@ -13,5 +14,13 @@ public class PauseMenu : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         
+    }
+
+    public void Continue() {
+
+    }
+
+    public void ToMainMenu() {
+        SceneManager.LoadScene(4, LoadSceneMode.Single);
     }
 }
