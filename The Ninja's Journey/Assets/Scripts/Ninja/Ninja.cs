@@ -55,6 +55,7 @@ public class Ninja : MonoBehaviour {
 
     public static Ninja instance;
 
+    /*
     private void Awake() {
         if(instance != null) {
             Destroy(gameObject);
@@ -64,6 +65,7 @@ public class Ninja : MonoBehaviour {
         }
         DontDestroyOnLoad(gameObject);
     }
+    */
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
