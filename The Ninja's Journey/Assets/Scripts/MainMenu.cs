@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
     [SerializeField] private int sceneBuildIndex;
-    [SerializeField] ChangeScene changeScene;
+    [SerializeField] private ChangeScene changeScene;
+
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject settingsPanel;
 
     // Start is called before the first frame update
     void Start() {
-        
+        settingsPanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,11 +31,17 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void Settings() {
-        
+        mainMenuPanel.SetActive(false);
+        settingsPanel.SetActive(true);
     }
 
     public void Quit() {
         Debug.Log("Exiting...");
         Application.Quit();
+    }
+
+    public void Back() {
+        mainMenuPanel.SetActive(true);
+        settingsPanel.SetActive(false);
     }
 }
