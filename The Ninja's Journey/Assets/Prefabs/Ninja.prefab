@@ -471,7 +471,7 @@ MonoBehaviour:
   healSFX: {fileID: 8300000, guid: bc7cdb538e7129648b5a5588fdc99e6b, type: 3}
   hitSFX: {fileID: 8300000, guid: aa35a726a27c68043ba770585cf22270, type: 3}
   dieSFX: {fileID: 8300000, guid: a09358c42c15f564482e4992a49b9e51, type: 3}
-  bulletSFX: {fileID: 8300000, guid: 84441e054493b1441846c3f736dcf1d7, type: 3}
+  bulletSFX: {fileID: 8300000, guid: 6c2c59f0d09457c47a683f16ddbcf3f2, type: 3}
   health: 3
 --- !u!114 &6575481434961628670
 MonoBehaviour:
