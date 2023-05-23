@@ -20,8 +20,8 @@ public class MainMenu : MonoBehaviour {
         
     }
 
-    public void Play() {
-        sceneBuildIndex = 3;
+    public void Play(int index) {
+        sceneBuildIndex = index;
         SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
     }
 
