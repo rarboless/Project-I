@@ -9032,11 +9032,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.905862
+      value: -5.9058614
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.4723895
+      value: 2.472407
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -9293,6 +9293,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1683794152211804066, guid: 862526d125de7134baceafd1dee34f2a, type: 3}
+      propertyPath: m_Volume
+      value: 0.283
+      objectReference: {fileID: 0}
     - target: {fileID: 1683794152211804066, guid: 862526d125de7134baceafd1dee34f2a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -9743,7 +9747,7 @@ PrefabInstance:
     - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: bulletSFX
       value: 
-      objectReference: {fileID: 8300000, guid: 6c2c59f0d09457c47a683f16ddbcf3f2, type: 3}
+      objectReference: {fileID: 8300000, guid: c481bbbab68274b45ae6c6d0877e68ea, type: 3}
     - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: arrowPrefab
       value: 

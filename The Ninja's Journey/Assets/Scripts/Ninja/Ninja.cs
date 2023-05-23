@@ -46,7 +46,6 @@ public class Ninja : MonoBehaviour {
     public AudioClip pickWeaponSFX;
     public AudioClip healSFX;
     public AudioClip hitSFX;
-    public AudioClip dieSFX;
     public AudioClip bulletSFX;
 
     //public int health = 3;
@@ -120,7 +119,6 @@ public class Ninja : MonoBehaviour {
     public void Die() {
         animator.SetBool("isDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
-        SoundManager.Instance.PlaySound(dieSFX);
         Invoke("Respawn", 2f);
     }
 
