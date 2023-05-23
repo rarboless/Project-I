@@ -7,10 +7,16 @@ using UnityEngine;
 public class CoinHUD : MonoBehaviour
 {
     public TextMeshProUGUI pointsHUD;
-    public GameMaster gmScript;
+    public GameMaster gm;
+    private int points;
 
+    void Start() {
+        //pointsHUD = GetComponent<TextMeshProUGUI>();
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+    }
     public void Update() {
-        pointsHUD.text = gmScript.points.ToString(); 
+        this.points = gm.points;
+        pointsHUD.text = this.points.ToString(); 
         //pointsHUD.text = gmScript.TotalPoints.ToString(); 
     }
 }

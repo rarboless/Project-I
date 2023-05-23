@@ -8,6 +8,10 @@ public class Coin : MonoBehaviour
     public GameMaster gm;
     public AudioClip coinSFX;
 
+    void Start() {
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("Player")) {
             gm.AddPoints(value);
