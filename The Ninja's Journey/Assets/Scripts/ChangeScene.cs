@@ -59,8 +59,4 @@ public class ChangeScene : MonoBehaviour {
 
         SceneManager.LoadScene(scene);
     }
-
-    public void FadeTo(string scene) {
-        StartCoroutine(FadeOut(scene));
-    }
 }
