@@ -49,24 +49,12 @@ public class Ninja : MonoBehaviour {
     public AudioClip dieSFX;
     public AudioClip bulletSFX;
 
-    public int health = 3;
+    //public int health = 3;
     private GameMaster gm;
     //private Bow bowScript;
     //private Shuriken shurikenScript;
 
     public static Ninja instance;
-
-    /*
-    private void Awake() {
-        if(instance != null) {
-            Destroy(gameObject);
-        }
-        else {
-            instance = this;
-        }
-        DontDestroyOnLoad(gameObject);
-    }
-    */
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -80,7 +68,6 @@ public class Ninja : MonoBehaviour {
     }
 
     private void Update() {
-        this.health = gm.health;
         Weapon();
 
         if (Input.GetMouseButtonDown(0)) {
@@ -144,10 +131,10 @@ public class Ninja : MonoBehaviour {
     }
     
     private float ChangeSpeedOnHealth() {
-        if (health == 2) {
+        if (gm.health == 2) {
             return 4f;
         }
-        else if(health == 1) {
+        else if(gm.health == 1) {
             return 3f;
         }
         else {

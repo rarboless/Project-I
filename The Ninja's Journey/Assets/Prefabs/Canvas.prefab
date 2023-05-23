@@ -243,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 10.293467, z: 21.876091, w: -1.7156228}
+  m_margin: {x: 0, y: 10.293467, z: -183.60516, w: -1.7156228}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -728,4 +728,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsHUD: {fileID: 2430811421866345309}
-  gmScript: {fileID: 0}
+  gm: {fileID: 0}
