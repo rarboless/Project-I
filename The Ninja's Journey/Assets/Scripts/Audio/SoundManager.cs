@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class AudioManager : MonoBehaviour
+public class SoundManager : MonoBehaviour
 {
-    public static AudioManager Instance { get; private set; }
+    public static SoundManager Instance { get; private set; }
     private AudioSource audioSource;
 
     private void Awake() {

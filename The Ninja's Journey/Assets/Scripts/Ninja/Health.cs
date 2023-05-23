@@ -22,7 +22,7 @@ public class Health : MonoBehaviour {
 
     public void TakeDamage() {
         ninjaScript.health -= 1;
-        AudioManager.Instance.PlaySound(ninjaScript.hitSFX);
+        SoundManager.Instance.PlaySound(ninjaScript.hitSFX);
 
         if (ninjaScript.health <= 0) {
             foreach (Image heart in hearts) {
@@ -44,12 +44,12 @@ public class Health : MonoBehaviour {
         if (collision.CompareTag("Heal")) {
             AddHealth(1);
             Destroy(collision.gameObject);
-            AudioManager.Instance.PlaySound(ninjaScript.healSFX);
+            SoundManager.Instance.PlaySound(ninjaScript.healSFX);
         }
         else if (collision.CompareTag("AllHeal")) {
             AddAllHealth();
             Destroy(collision.gameObject);
-            AudioManager.Instance.PlaySound(ninjaScript.healSFX);
+            SoundManager.Instance.PlaySound(ninjaScript.healSFX);
         }
     }
 

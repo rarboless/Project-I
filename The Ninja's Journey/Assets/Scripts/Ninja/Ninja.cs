@@ -107,7 +107,7 @@ public class Ninja : MonoBehaviour {
         bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
 
-        AudioManager.Instance.PlaySound(bulletSFX);
+        SoundManager.Instance.PlaySound(bulletSFX);
 
         Destroy(bullet, 5f);
     }
@@ -115,7 +115,7 @@ public class Ninja : MonoBehaviour {
     public void Die() {
         animator.SetBool("isDead", true);
         rigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
-        AudioManager.Instance.PlaySound(dieSFX);
+        SoundManager.Instance.PlaySound(dieSFX);
         Invoke("Respawn", 2f);
     }
 
@@ -141,7 +141,7 @@ public class Ninja : MonoBehaviour {
             weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
             bulletPrefab = shurikenPrefab;
             Destroy(collision.gameObject);
-            AudioManager.Instance.PlaySound(pickWeaponSFX);
+                SoundManager.Instance.PlaySound(pickWeaponSFX);
 
         }
         if (collision.CompareTag("Bow")) {
@@ -151,7 +151,7 @@ public class Ninja : MonoBehaviour {
             weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
             bulletPrefab = arrowPrefab;
             Destroy(collision.gameObject);
-            AudioManager.Instance.PlaySound(pickWeaponSFX);
+            SoundManager.Instance.PlaySound(pickWeaponSFX);
         }
     }
 }
