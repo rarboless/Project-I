@@ -24,8 +24,8 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float fireForce;
 
-    [SerializeField] private GameObject weapon;
-    [SerializeField] private GameObject weapon1;
+    [SerializeField] private GameObject weaponGameObject;
+    [SerializeField] private GameObject weaponSpriteObject;
 
     [SerializeField] private float timeBetweenShots;
     private float timeOfLastShot;
@@ -83,8 +83,8 @@ public class Ninja : MonoBehaviour {
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 aimDirection = mousePosition - rigidBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        weapon.GetComponent<Rigidbody2D>().rotation = aimAngle;
-        firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
+        weaponGameObject.GetComponent<Rigidbody2D>().rotation = aimAngle;
+        firePoint.GetComponent<UnityEngine.Transform>().position = weaponGameObject.GetComponent<UnityEngine.Transform>().position + (weaponGameObject.GetComponent<UnityEngine.Transform>().up * 0.3f);
     }
 
     void MovementProcess() {
@@ -97,8 +97,8 @@ public class Ninja : MonoBehaviour {
             animator.SetFloat("moveY", movement.y);
             animator.SetBool("isWalking", true);
 
-            weapon.GetComponent<UnityEngine.Transform>().position = rigidBody.position;
-            firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
+            weaponGameObject.GetComponent<UnityEngine.Transform>().position = rigidBody.position;
+            firePoint.GetComponent<UnityEngine.Transform>().position = weaponGameObject.GetComponent<UnityEngine.Transform>().position + (weaponGameObject.GetComponent<UnityEngine.Transform>().up * 0.3f);
 
         }
         else {
@@ -161,10 +161,10 @@ public class Ninja : MonoBehaviour {
 
     private void Weapon() {
         if(gm.currentWeapon == 1) {
-            weapon1.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
+            weaponSpriteObject.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
             bulletPrefab = shurikenPrefab;
         }else if(gm.currentWeapon == 0) {
-            weapon1.GetComponent<SpriteRenderer>().sprite = bowSprite;
+            weaponSpriteObject.GetComponent<SpriteRenderer>().sprite = bowSprite;
             bulletPrefab = arrowPrefab;
         }
     }

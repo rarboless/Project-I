@@ -457,11 +457,11 @@ MonoBehaviour:
   firePoint: {fileID: 3580215312723296781}
   bulletPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
   fireForce: 20
-  weapon: {fileID: 3580215312419301146}
-  weapon1: {fileID: 3580215312206258240}
+  weaponGameObject: {fileID: 3580215312419301146}
+  weaponSpriteObject: {fileID: 3580215312206258240}
   timeBetweenShots: 0.28
   shurikenSprite: {fileID: 21300000, guid: 105d3d5aa7b6cf34b905bcbacba6d932, type: 3}
-  shurikenPrefab: {fileID: 1511467419514561221, guid: ad782d88eaaf49b4a83cb70adb18f716, type: 3}
+  shurikenPrefab: {fileID: 5592070955082474733, guid: 211bf012084ed4b498b2860a42ae37b4, type: 3}
   bowSprite: {fileID: 21300000, guid: 592c7554ceaec8b439dd4a45d930f8dc, type: 3}
   arrowPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
   shakeIntensity: 5
@@ -472,7 +472,6 @@ MonoBehaviour:
   hitSFX: {fileID: 8300000, guid: aa35a726a27c68043ba770585cf22270, type: 3}
   dieSFX: {fileID: 8300000, guid: a09358c42c15f564482e4992a49b9e51, type: 3}
   bulletSFX: {fileID: 8300000, guid: 6c2c59f0d09457c47a683f16ddbcf3f2, type: 3}
-  health: 3
 --- !u!114 &6575481434961628670
 MonoBehaviour:
   m_ObjectHideFlags: 0
