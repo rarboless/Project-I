@@ -23,11 +23,12 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void Levels() {
-
+        sceneBuildIndex = 5;
+        SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
     }
 
     public void Settings() {
-
+        
     }
 
     public void Quit() {
