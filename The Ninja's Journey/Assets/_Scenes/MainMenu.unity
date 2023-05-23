@@ -1855,7 +1855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Comming    Soon :)
+  m_text: Comming    Soon   :)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ea12dfed555ae241a5e35a382867c1d, type: 2}
   m_sharedMaterial: {fileID: 1820065448386981842, guid: 3ea12dfed555ae241a5e35a382867c1d, type: 2}
