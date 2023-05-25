@@ -13,11 +13,20 @@ public class PauseMenu : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Toggle();
+        }
     }
 
-    public void Continue() {
+    public void Toggle() {
+        pausePanel.SetActive(!pausePanel.activeSelf);
 
+        /*if (pausePanel.activeSelf) {
+            //Time.timeScale = 0f;
+        }
+        else {
+            Time.timeScale = 1f;
+        }*/
     }
 
     public void ToMainMenu() {
