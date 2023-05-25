@@ -392,10 +392,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1007502678}
     m_Modifications:
+    - target: {fileID: 393514339516388125, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393514339516388125, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393514339516388125, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393514339516388125, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393514339516388125, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393514339516388125, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2430811420492448247, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
       propertyPath: gmScript
       value: 
       objectReference: {fileID: 1613781812}
+    - target: {fileID: 3680459838552152928, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680459838552152928, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680459838552152928, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680459838552152928, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680459838552152928, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680459838552152928, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5088675006558663886, guid: 3ad5dfe941ad2cd4690189a9c92efd72, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -673,6 +721,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3580215312206258240, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
   m_PrefabInstance: {fileID: 179980324725203298}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &574316979 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1683794152211804066, guid: 862526d125de7134baceafd1dee34f2a, type: 3}
+  m_PrefabInstance: {fileID: 1480121983}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &577689920 stripped
 RectTransform:
@@ -9036,7 +9089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.472407
+      value: 2.4724095
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -9301,6 +9354,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1683794152211804066, guid: 862526d125de7134baceafd1dee34f2a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ef9efc0b4fcb1cd4084e6928490f8373, type: 3}
     - target: {fileID: 4311867958030059197, guid: 862526d125de7134baceafd1dee34f2a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9353,6 +9410,10 @@ PrefabInstance:
       propertyPath: musicStart
       value: 
       objectReference: {fileID: 8300000, guid: ef9efc0b4fcb1cd4084e6928490f8373, type: 3}
+    - target: {fileID: 4311867959200504054, guid: 862526d125de7134baceafd1dee34f2a, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 574316979}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 862526d125de7134baceafd1dee34f2a, type: 3}
 --- !u!1 &1485198500
