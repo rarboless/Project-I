@@ -21,15 +21,16 @@ public class PauseMenu : MonoBehaviour {
     public void Toggle() {
         pausePanel.SetActive(!pausePanel.activeSelf);
 
-        /*if (pausePanel.activeSelf) {
-            //Time.timeScale = 0f;
+        if (pausePanel.activeSelf) {
+            Time.timeScale = 0f;
         }
         else {
             Time.timeScale = 1f;
-        }*/
+        }
     }
 
     public void ToMainMenu() {
         SceneManager.LoadScene(4, LoadSceneMode.Single);
+        Time.timeScale = 1f;
     }
 }

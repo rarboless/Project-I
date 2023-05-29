@@ -9085,11 +9085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9058623
+      value: -5.9058504
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.472391
+      value: 2.4690373
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -9335,7 +9335,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14501,7 +14501,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 8
       minScalar: 5
       maxCurve:
         serializedVersion: 2
