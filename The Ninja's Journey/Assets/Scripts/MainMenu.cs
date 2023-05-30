@@ -9,9 +9,12 @@ public class MainMenu : MonoBehaviour {
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private GameObject levelsPanel;
-    
+    private GameMaster gm;
+
+
     // Start is called before the first frame update
     void Start() {
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         settingsPanel.SetActive(false);
         levelsPanel.SetActive(false);
     }
@@ -23,6 +26,10 @@ public class MainMenu : MonoBehaviour {
 
     public void Play(int index) {
         sceneBuildIndex = index;
+        gm.points = 0;
+        gm.health = 3;
+        gm.currentWeapon = 0;
+        
         SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
     }
 
