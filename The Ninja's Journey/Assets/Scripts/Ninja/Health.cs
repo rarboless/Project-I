@@ -12,6 +12,11 @@ public class Health : MonoBehaviour {
     private GameMaster gm;
     private int maxHealth = 3;
 
+    [Header("Camera Shake")]
+    private float shakeIntensity = 5;
+    private float shakeFrequency = 5;
+    private float shakeTime = 0.5f;
+
     void Start () {
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
     }
@@ -28,6 +33,8 @@ public class Health : MonoBehaviour {
     public void TakeDamage() {
         gm.health -= 1;
         SoundManager.Instance.PlaySound(ninjaScript.hitSFX);
+        CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
+
 
         if (gm.health <= 0) {
             foreach (Image heart in hearts) {

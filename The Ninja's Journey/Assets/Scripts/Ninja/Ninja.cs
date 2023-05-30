@@ -70,7 +70,7 @@ public class Ninja : MonoBehaviour {
         Weapon();
 
         if (Input.GetMouseButtonDown(0)) {
-            CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
+            //CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
         }
         if (Input.GetMouseButtonDown(1)) {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
