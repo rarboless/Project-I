@@ -6,11 +6,11 @@ public class MusicManager : MonoBehaviour {
     [SerializeField] private AudioSource backgroundMusic;
     [SerializeField] private AudioClip musicStart;
     void Start() {
-        //StartCoroutine(FadeIn(backgroundMusic, 10));
+        StartCoroutine(FadeIn(backgroundMusic, 10));
         backgroundMusic.PlayOneShot(musicStart);
         backgroundMusic.PlayScheduled(AudioSettings.dspTime + musicStart.length);
     }
-    /*
+    
     public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime) {
         audioSource.Play();
         audioSource.volume = 0f;
@@ -19,5 +19,5 @@ public class MusicManager : MonoBehaviour {
             yield return null;
         }
     }
-    */
+    
 }
