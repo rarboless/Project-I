@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4311867959784238793}
   - component: {fileID: 6046774364585354014}
   m_Layer: 0
-  m_Name: 'SoundManager (Missing Prefab with guid: fef03520b13c81a449034223f6ee4631)'
+  m_Name: 'SFXManager (Missing Prefab with guid: fef03520b13c81a449034223f6ee4631)'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
