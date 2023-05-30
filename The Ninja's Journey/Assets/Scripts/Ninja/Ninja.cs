@@ -37,11 +37,6 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private Sprite bowSprite;
     [SerializeField] private GameObject arrowPrefab;
 
-    [Header("Camera Shake")]
-    [SerializeField] private float shakeIntensity;
-    [SerializeField] private float shakeFrequency;
-    [SerializeField] private float shakeTime;
-
     [Header("SFX")]
     public AudioClip pickWeaponSFX;
     public AudioClip healSFX;
