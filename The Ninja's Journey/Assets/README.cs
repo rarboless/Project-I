@@ -1,11 +1,23 @@
 /*
-    - Quan el personatge perd vida, disminueix la seva velocitat de moviment.
-    - Hi han monedes en el mapa per recol·lectar, a la entrega final és guardran entre escenes.
-    - A més de les monedes com a pick-ups, també tenim picks ups curatius, fa que puguis recuperar una vida o tota depenent de la mida del cor.
-    - Els canvis de d'escena funcionen com a checkpoints, restauren la vida i quan mors apareixes en l'últim canvi de d'escena que has fet.
-    - També hi ha pickups de les armes per poder aconseguir aquesta (només dos d´implementades, de moment: arc i shuriken. Cadascuna te velocitat de dispar i mal diferent)
-    - Hi ha dos tipus d'enemics que hem implemenent de moment:
-        - L'enemic Flame, et persegueix i quan estàs en el seu radi d'atac, et comença a dispara i es queda en una distancia de tu.
-        - L'enemic Skull, et persegueix quan estiguis dins del radi de persecució, quan no ho és torna a la seva posició inicial. Et treu vida quan et toca i va més ràpid que flame.
-    - A més, tenim una masmorra, a la qual s'accedeix entran per la cova de l'escena principal. Allà et trobaràs enemics, curacions, monedes, altres pickups. i armes.
+Menú:
+Hemos creado una escena del menú que contiene diferentes botones,
+dentro de la misma escena está en main menu, settings y levels,
+se activan o desactivan dependiendo del botón pulsado.
+También dentro de la partida hay la opción de pausa,
+se puede activar tanto con la tecla ESC como por el botón de la esquina superior derecha.
+En este se puede regular el volumen tanto de la música como de los efectos de sonido,
+que se guarda entre escenas, el botón de continuar y finalmente volver al menú principal 
+(se reinicia la vida, monedas y armas).
+
+Audio:
+Hemos añadido efectos de sonido a los disparos, al coger las armas y monedas,
+al recibir daño tanto al jugador como a los enemigos, al curarse y cuándo se efectúa clics en los botones del menú.
+La música cambia dependiendo de la escena en la que estemos y tiene un fade de 5 segundos.
+Hay un mixer en Prefabs desde el cual los sliders del menú de pausa controlan el sonido.
+
+Efectos:
+Hemos creado efectos de partículas de lluvia y el contacto con el agua en la escena Exterior.
+También a los dos tipos de enemigos y a las armas, uno para cada tipo de arma.
+Se encuentran en la carpeta Particles.
+
 */
