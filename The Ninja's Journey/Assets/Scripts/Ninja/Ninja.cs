@@ -43,7 +43,6 @@ public class Ninja : MonoBehaviour {
     public AudioClip hitSFX;
     public AudioClip bulletSFX;
 
-    //public int health = 3;
     private GameMaster gm;
     //private Bow bowScript;
     //private Shuriken shurikenScript;
@@ -65,9 +64,6 @@ public class Ninja : MonoBehaviour {
         Weapon();
 
         if (Input.GetMouseButtonDown(0)) {
-            //CineMachineShake.Instance.ShakeCamera(shakeIntensity, shakeFrequency, shakeTime);
-        }
-        if (Input.GetMouseButtonDown(1)) {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
                 Shoot();
                 timeOfLastShot = Time.time;
@@ -128,7 +124,7 @@ public class Ninja : MonoBehaviour {
         if (gm.health == 2) {
             return 4f;
         }
-        else if(gm.health == 1) {
+        else if (gm.health == 1) {
             return 3f;
         }
         else {
@@ -154,10 +150,11 @@ public class Ninja : MonoBehaviour {
     }
 
     private void Weapon() {
-        if(gm.currentWeapon == 1) {
+        if (gm.currentWeapon == 1) {
             weaponSpriteObject.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
             bulletPrefab = shurikenPrefab;
-        }else if(gm.currentWeapon == 0) {
+        }
+        else if (gm.currentWeapon == 0) {
             weaponSpriteObject.GetComponent<SpriteRenderer>().sprite = bowSprite;
             bulletPrefab = arrowPrefab;
         }
