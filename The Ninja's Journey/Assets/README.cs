@@ -16,7 +16,7 @@ La música cambia dependiendo de la escena en la que estemos y tiene un fade de 5
 Hay un mixer en Prefabs desde el cual los sliders del menú de pausa controlan el sonido.
 
 Efectos:
-Hemos creado efectos de partículas de lluvia y el contacto con el agua en la escena Exterior.
+Hemos creado efectos de partículas de lluvia (la escena tiene un filtro que oscurece la pantalla) y el contacto con el agua en la escena Exterior.
 También a los dos tipos de enemigos y a las armas, uno para cada tipo de arma.
 Se encuentran en la carpeta Particles.
 
