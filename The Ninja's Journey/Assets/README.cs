@@ -1,23 +1,23 @@
 /*
-Menú:
-Hemos creado una escena del menú que contiene diferentes botones,
-dentro de la misma escena está en main menu, settings y levels,
-se activan o desactivan dependiendo del botón pulsado.
-También dentro de la partida hay la opción de pausa,
-se puede activar tanto con la tecla ESC como por el botón de la esquina superior derecha.
-En este se puede regular el volumen tanto de la música como de los efectos de sonido,
-que se guarda entre escenas, el botón de continuar y finalmente volver al menú principal 
+Menï¿½:
+Hemos creado una escena del menï¿½ que contiene diferentes botones,
+dentro de la misma escena estï¿½ en main menu, settings y levels,
+se activan o desactivan dependiendo del botï¿½n pulsado.
+Tambiï¿½n dentro de la partida hay la opciï¿½n de pausa,
+se puede activar tanto con la tecla ESC como por el botï¿½n de la esquina superior derecha.
+En este se puede regular el volumen tanto de la mï¿½sica como de los efectos de sonido,
+que se guarda entre escenas, el botï¿½n de continuar y finalmente volver al menï¿½ principal 
 (se reinicia la vida, monedas y armas).
 
 Audio:
-Hemos añadido efectos de sonido a los disparos, al coger las armas y monedas,
-al recibir daño tanto al jugador como a los enemigos, al curarse y cuándo se efectúa clics en los botones del menú.
-La música cambia dependiendo de la escena en la que estemos y tiene un fade de 5 segundos.
-Hay un mixer en Prefabs desde el cual los sliders del menú de pausa controlan el sonido.
+Hemos aï¿½adido efectos de sonido a los disparos, al coger las armas y monedas,
+al recibir daï¿½o tanto al jugador como a los enemigos, al curarse y cuï¿½ndo se efectï¿½a clics en los botones del menï¿½.
+La mï¿½sica cambia dependiendo de la escena en la que estemos y tiene un fade de 5 segundos.
+Hay un mixer en Prefabs desde el cual los sliders del menï¿½ de pausa controlan el sonido.
 
 Efectos:
-Hemos creado efectos de partículas de lluvia y el contacto con el agua en la escena Exterior.
-También a los dos tipos de enemigos y a las armas, uno para cada tipo de arma.
+Hemos creado efectos de partï¿½culas de lluvia (la escena tiene un filtro que oscurece la pantalla) y el contacto con el agua en la escena Exterior.
+Tambiï¿½n a los dos tipos de enemigos y a las armas, uno para cada tipo de arma.
 Se encuentran en la carpeta Particles.
 
 */
