@@ -5,8 +5,9 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour {
     [SerializeField] private AudioSource backgroundMusic;
     [SerializeField] private AudioClip musicStart;
+
     void Start() {
-        StartCoroutine(FadeIn(backgroundMusic, 10));
+        StartCoroutine(FadeIn(backgroundMusic, 5));
         backgroundMusic.PlayOneShot(musicStart);
         backgroundMusic.PlayScheduled(AudioSettings.dspTime + musicStart.length);
     }
