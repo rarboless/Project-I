@@ -4824,11 +4824,11 @@ GameObject:
   - component: {fileID: 5394915239954536515}
   - component: {fileID: 5394915239954536517}
   - component: {fileID: 5394915239954536516}
-  - component: {fileID: 5394915239954536513}
   - component: {fileID: 6937046273061539959}
+  - component: {fileID: 2731491127575527145}
   m_Layer: 0
   m_Name: Tree
-  m_TagString: Enemy
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4948,25 +4948,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.008496, y: 1.0034184}
   m_EdgeRadius: 0
---- !u!114 &5394915239954536513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5394915239954536519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b82ab46324411a74f8a409b2851e670c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  chaseRadius: 6
-  attackRadius: 0
-  homePosition: {fileID: 0}
-  maxHealth: 5
-  moveSpeed: 3
-  hitSFX: {fileID: 8300000, guid: ccfdbc5e98847ff4891a2a1a5773fcff, type: 3}
 --- !u!95 &6937046273061539959
 Animator:
   serializedVersion: 5
@@ -4988,3 +4969,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2731491127575527145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5394915239954536519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3733415e24b8f394483a117a792146a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  chaseRadius: 8
+  attackRadius: 0
+  homePosition: {fileID: 0}
+  maxHealth: 1
+  moveSpeed: 10
+  hitSFX: {fileID: 8300000, guid: ccfdbc5e98847ff4891a2a1a5773fcff, type: 3}
