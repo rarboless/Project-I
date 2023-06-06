@@ -67,7 +67,13 @@ public class Ninja : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0)) {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
-                Shoot();
+                if (gm.currentWeapon == 2) {
+                    ShootKunai();
+                }
+                else {
+                    Shoot();
+                }
+                
                 timeOfLastShot = Time.time;
             }
         }
@@ -102,6 +108,25 @@ public class Ninja : MonoBehaviour {
         Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mousePosition.y - rigidBody.position.y, mousePosition.x - rigidBody.position.x) * Mathf.Rad2Deg);
         
         bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
+
+        SoundManager.Instance.PlaySound(bulletSFX);
+
+        Destroy(bullet, 5f);
+    }
+
+    void ShootKunai() {
+        Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mousePosition.y - rigidBody.position.y, mousePosition.x - rigidBody.position.x) * Mathf.Rad2Deg);
+        Quaternion otherRotation = Quaternion.Euler(0, 0, 45 * Mathf.Rad2Deg);
+        Quaternion otherRotationNegative = Quaternion.Euler(0, 0, -45 * Mathf.Rad2Deg);
+
+        Vector3 v3 = new Vector3(0, 0, 45);
+
+        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
+        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position + v3 , otherRotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
+        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position - v3, otherRotationNegative);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
 
         SoundManager.Instance.PlaySound(bulletSFX);

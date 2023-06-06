@@ -51,6 +51,9 @@ public class Health : MonoBehaviour {
         if (collision.collider.CompareTag("FlameBullet")) {
             TakeDamage();
         }
+        if(collision.collider.CompareTag("Tree")) {
+            TakeDamage();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Heal")) {

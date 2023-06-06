@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,6 +47,9 @@ public class Enemy : MonoBehaviour {
         if (collision.collider.CompareTag("Bullet")) {
             bs = collision.collider.GetComponent<BulletScript>();
             TakeDamage();
+        }
+        if(collision.collider.CompareTag("Player") && this.gameObject.CompareTag("Tree")) {
+            Destroy(this.gameObject);
         }
     }
 }
