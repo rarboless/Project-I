@@ -67,12 +67,12 @@ public class Ninja : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0)) {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
-                if (gm.currentWeapon == 2) {
+                /*if (gm.currentWeapon == 2) {
                     ShootKunai();
                 }
-                else {
+                else {*/
                     Shoot();
-                }
+                //}
                 
                 timeOfLastShot = Time.time;
             }
