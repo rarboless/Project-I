@@ -17,12 +17,12 @@ public class ParticleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_particleSystemMain == true && Input.GetKeyDown(KeyCode.K))
+        if(_particleSystemMain == true && Input.GetKey(KeyCode.K))
         {
             _particleSystemMain.Stop();
             _particleSystemSecondary.Play();
         }
-        else if(Input.GetKeyUp(KeyCode.K)) 
+        else if(Input.GetKey(KeyCode.K)) 
         {
             _particleSystemMain.Play();
             _particleSystemSecondary.Stop();
