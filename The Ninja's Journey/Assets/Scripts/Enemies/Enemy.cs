@@ -29,13 +29,14 @@ public class Enemy : MonoBehaviour {
     }
 
     void Update() {
-
+        
     }
 
     protected void TakeDamage() {
         if (maxHealth <= 0) {
             Destroy(gameObject);
-        }else if (maxHealth > 0) {
+        }
+        else if (maxHealth > 0) {
             maxHealth -= bs.damage;
         }
         SoundManager.Instance.PlaySound(hitSFX);

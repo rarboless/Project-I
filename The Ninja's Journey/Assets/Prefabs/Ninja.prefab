@@ -5291,9 +5291,8 @@ MonoBehaviour:
   shurikenPrefab: {fileID: 5592070955082474733, guid: 211bf012084ed4b498b2860a42ae37b4, type: 3}
   bowSprite: {fileID: 21300000, guid: 592c7554ceaec8b439dd4a45d930f8dc, type: 3}
   arrowPrefab: {fileID: 5592070955082474733, guid: c4f68aba923da444595c9cf609a4ffd2, type: 3}
-  shakeIntensity: 5
-  shakeFrequency: 5
-  shakeTime: 0.5
+  kunaiSprite: {fileID: 21300000, guid: fcc965feb451fec4d88e584ca146e421, type: 3}
+  kunaiPrefab: {fileID: 5592070955082474733, guid: a64d6cfbba63f5546a277867efe11b58, type: 3}
   pickWeaponSFX: {fileID: 8300000, guid: 776deace9642deb46a904df0b9f14d99, type: 3}
   healSFX: {fileID: 8300000, guid: bc7cdb538e7129648b5a5588fdc99e6b, type: 3}
   hitSFX: {fileID: 8300000, guid: aa35a726a27c68043ba770585cf22270, type: 3}
