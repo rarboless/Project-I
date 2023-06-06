@@ -10,6 +10,9 @@ public class Skull : Enemy {
     }
 
     private void Update() {
+        if (maxHealth <= 0) {
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate() {
