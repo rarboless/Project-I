@@ -7,13 +7,9 @@ public class Skull : Enemy {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+     
     }
 
-    private void Update() {
-        if (maxHealth <= 0) {
-            Destroy(gameObject);
-        }
-    }
 
     void FixedUpdate() {
         Movement();

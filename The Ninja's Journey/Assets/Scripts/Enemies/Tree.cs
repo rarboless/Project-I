@@ -9,12 +9,6 @@ public class Tree : Enemy {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update() {
-        if (maxHealth <= 0) {
-            Destroy(gameObject);
-        }
-    }
-
     void FixedUpdate() {
         Movement();
     }

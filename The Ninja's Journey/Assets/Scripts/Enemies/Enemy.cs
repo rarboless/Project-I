@@ -24,9 +24,11 @@ public class Enemy : MonoBehaviour {
     protected Rigidbody2D rb;
 
     protected BulletScript bs;
+    protected GameMaster gm;
+    public int value = 1;
 
     void Start() {
-        
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
     }
 
     void Update() {
@@ -34,12 +36,14 @@ public class Enemy : MonoBehaviour {
     }
 
     protected void TakeDamage() {
-        if (maxHealth <= 0) {
-            Destroy(gameObject);
-        }
-        else if (maxHealth > 0) {
+        if (maxHealth > 0) {
             maxHealth -= bs.damage;
         }
+        if (maxHealth <= 0) {
+            //gm.AddPoints(value);
+            Destroy(gameObject);
+        }
+
         SoundManager.Instance.PlaySound(hitSFX);
     }
 

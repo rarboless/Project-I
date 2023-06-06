@@ -26,10 +26,6 @@ public class FlameEnemy : Enemy {
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         weapon.GetComponent<Rigidbody2D>().rotation = aimAngle;
         firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
-
-        if (maxHealth <= 0) {
-            Destroy(gameObject);
-        }
     }
 
     void FixedUpdate() {
