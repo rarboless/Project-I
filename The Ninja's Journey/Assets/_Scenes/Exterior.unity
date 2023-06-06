@@ -12176,11 +12176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9065943
+      value: -5.906593
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.4707873
+      value: 2.4708111
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -29671,11 +29671,11 @@ PrefabInstance:
     - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: kunaiPrefab
       value: 
-      objectReference: {fileID: 7839973821150845055, guid: 20ad7fa2ad9e83941a37f4ded33b3541, type: 3}
+      objectReference: {fileID: 5592070955082474733, guid: a64d6cfbba63f5546a277867efe11b58, type: 3}
     - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: kunaiSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 51abe27e1b4b4a2419db7790d62cbc32, type: 3}
+      objectReference: {fileID: 21300000, guid: fcc965feb451fec4d88e584ca146e421, type: 3}
     - target: {fileID: 3580215313235729294, guid: c0b63fc27f6572443a9e71e68130fc83, type: 3}
       propertyPath: shurikenPrefab
       value: 
