@@ -16,6 +16,7 @@ TagManager:
   - Shuriken
   - Bow
   - AllHeal
+  - Kunai
   layers:
   - Default
   - TransparentFX

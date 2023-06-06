@@ -36,6 +36,8 @@ public class Ninja : MonoBehaviour {
     [SerializeField] private GameObject shurikenPrefab;
     [SerializeField] private Sprite bowSprite;
     [SerializeField] private GameObject arrowPrefab;
+    [SerializeField] private Sprite kunaiSprite;
+    [SerializeField] private GameObject kunaiPrefab;
 
     [Header("SFX")]
     public AudioClip pickWeaponSFX;
@@ -137,7 +139,6 @@ public class Ninja : MonoBehaviour {
             gm.currentWeapon = 1;
             Destroy(collision.gameObject);
             SoundManager.Instance.PlaySound(pickWeaponSFX);
-
         }
         if (collision.CompareTag("Bow")) {
             //Manera bona pero no funciona (Script amb Path dels archis)
@@ -147,10 +148,19 @@ public class Ninja : MonoBehaviour {
             Destroy(collision.gameObject);
             SoundManager.Instance.PlaySound(pickWeaponSFX);
         }
+        if (collision.CompareTag("Kunai")) {
+            gm.currentWeapon = 2;
+            Destroy(collision.gameObject);
+            SoundManager.Instance.PlaySound(pickWeaponSFX);
+        }
     }
 
     private void Weapon() {
-        if (gm.currentWeapon == 1) {
+        if (gm.currentWeapon == 2) {
+            weaponSpriteObject.GetComponent<SpriteRenderer>().sprite = kunaiSprite;
+            bulletPrefab = kunaiPrefab;
+        }
+        else if (gm.currentWeapon == 1) {
             weaponSpriteObject.GetComponent<SpriteRenderer>().sprite = shurikenSprite;
             bulletPrefab = shurikenPrefab;
         }
