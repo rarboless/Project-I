@@ -21,13 +21,7 @@ public class FlameEnemy : Enemy {
 
     private void Update() {
         CheckDistance();
-
-        if (Vector2.Distance(target.position, transform.position) <= attackRadius) {
-            if (Time.time - timeOfLastShot >= timeBetweenShots) {
-                Shoot();
-                timeOfLastShot = Time.time;
-            }
-        }
+       
 
         Vector2 aimDirection = target.position - firePoint.transform.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
@@ -35,7 +29,11 @@ public class FlameEnemy : Enemy {
         firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
     }
 
-    void CheckDistance() {
+    void FixedUpdate() {
+        Movement();
+    }
+
+    void Movement() {
         target = GameObject.FindWithTag("Player").transform;
 
         animator.SetBool("isWalking", true);
@@ -51,6 +49,15 @@ public class FlameEnemy : Enemy {
         }
         else {
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
+        }
+    }
+
+    void CheckDistance() {
+        if (Vector2.Distance(target.position, transform.position) <= attackRadius) {
+            if (Time.time - timeOfLastShot >= timeBetweenShots) {
+                Shoot();
+                timeOfLastShot = Time.time;
+            }
         }
     }
 

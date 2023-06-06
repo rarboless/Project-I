@@ -10,10 +10,13 @@ public class Skull : Enemy {
     }
 
     private void Update() {
-        CheckDistance();
     }
 
-    void CheckDistance() {
+    void FixedUpdate() {
+        Movement();
+    }
+
+    void Movement() {
         target = GameObject.FindWithTag("Player").transform;
 
         animator.SetBool("isWalking", true);
