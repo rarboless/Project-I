@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+    public GameMaster gm;
+
     [Header("Propietats principals")]
     [SerializeField] public Transform target; //public -> Health
     [SerializeField] protected float chaseRadius;
@@ -24,11 +26,8 @@ public class Enemy : MonoBehaviour {
     protected Rigidbody2D rb;
 
     protected BulletScript bs;
-    protected GameMaster gm;
-    public int value = 1;
 
     void Start() {
-        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
     }
 
     void Update() {
@@ -40,7 +39,7 @@ public class Enemy : MonoBehaviour {
             maxHealth -= bs.damage;
         }
         if (maxHealth <= 0) {
-            //gm.AddPoints(value);
+            gm.AddPoints(1);
             Destroy(gameObject);
         }
 

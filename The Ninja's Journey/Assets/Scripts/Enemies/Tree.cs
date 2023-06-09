@@ -7,6 +7,8 @@ public class Tree : Enemy {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+
     }
 
     void FixedUpdate() {
