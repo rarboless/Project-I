@@ -45,12 +45,16 @@ public class Enemy : MonoBehaviour {
             maxHealth -= bs.damage;
         }
         if (maxHealth <= 0) {
-            gm.AddPoints(1);
-            Destroy(gameObject);
-            SoundManager.Instance.PlaySound(coin.coinSFX);
+            Die();
         }
 
         SoundManager.Instance.PlaySound(hitSFX);
+    }
+
+    protected void Die() {
+        gm.AddPoints(pointsToAdd: 1);
+        Destroy(gameObject);
+        SoundManager.Instance.PlaySound(coin.coinSFX);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision) {
