@@ -37,6 +37,7 @@ public class FlameEnemy : Enemy {
 
 
         if (Vector2.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius) {
+            movement = (target.position- transform.position).normalized;
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
 
             animator.SetFloat("moveX", movement.x);
