@@ -36,7 +36,6 @@ public class Enemy : MonoBehaviour {
     }
 
     void Update() {
-        
     }
 
     protected void TakeDamage() {
@@ -50,7 +49,8 @@ public class Enemy : MonoBehaviour {
     }
 
     protected void Die() {
-        gm.AddPoints(pointsToAdd: 1);
+        gm.AddPoints( 1);
+        gm.AddEnemiesKilled( 1);
         Destroy(gameObject);
         SoundManager.Instance.PlaySound(dieSFX);
     }
