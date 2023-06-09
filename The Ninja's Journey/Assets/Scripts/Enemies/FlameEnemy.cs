@@ -35,19 +35,22 @@ public class FlameEnemy : Enemy {
     void Movement() {
         target = GameObject.FindWithTag("Player").transform;
 
-        animator.SetBool("isWalking", true);
 
         if (Vector2.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius) {
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
 
             animator.SetFloat("moveX", movement.x);
             animator.SetFloat("moveY", movement.y);
+            animator.SetBool("isWalking", true);
+
 
             weapon.GetComponent<UnityEngine.Transform>().position = rb.position;
             firePoint.GetComponent<UnityEngine.Transform>().position = weapon.GetComponent<UnityEngine.Transform>().position + (weapon.GetComponent<UnityEngine.Transform>().up * 0.3f);
         }
         else {
             transform.position = Vector2.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
+            animator.SetBool("isWalking", false);
+
         }
     }
 
