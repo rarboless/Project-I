@@ -4730,6 +4730,7 @@ MonoBehaviour:
   maxHealth: 11
   moveSpeed: 2
   hitSFX: {fileID: 8300000, guid: ccfdbc5e98847ff4891a2a1a5773fcff, type: 3}
+  coinPrefab: {fileID: 4072217058876851300, guid: ce538d319870b9a44829c01c606c48c0, type: 3}
 --- !u!1 &1148604947
 GameObject:
   m_ObjectHideFlags: 0

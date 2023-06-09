@@ -8,23 +8,26 @@ public class Boss : MonoBehaviour
 
     [Header("Propietats principals")]
     [SerializeField] public Transform target; //public -> Health
-    [SerializeField] protected float chaseRadius;
-    [SerializeField] protected float attackRadius;
+    [SerializeField] private float chaseRadius;
+    [SerializeField] private float attackRadius;
 
     [Header("Moviment")]
-    protected Vector3 movement;
-    protected Animator animator;
+    private Vector3 movement;
+    private Animator animator;
 
     [Header("Estadístiques")]
-    [SerializeField] protected float maxHealth;
-    [SerializeField] protected float moveSpeed;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float moveSpeed;
 
     [Header("SFX")]
     public AudioClip hitSFX;
 
-    protected Rigidbody2D rb;
+    [Header("Coin")]
+    [SerializeField] private GameObject coinPrefab;
 
-    protected BulletScript bs;
+    private Rigidbody2D rb;
+
+    private BulletScript bs;
 
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
@@ -49,22 +52,34 @@ public class Boss : MonoBehaviour
         }
     }
 
-    protected void TakeDamage() {
+    private void TakeDamage() {
         if (maxHealth > 0) {
             maxHealth -= bs.damage;
         }
         if (maxHealth <= 0) {
-            gm.AddPoints(10);
             Destroy(gameObject);
+            SpawnCoins();
         }
 
         SoundManager.Instance.PlaySound(hitSFX);
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision) {
+    private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.CompareTag("Bullet")) {
             bs = collision.collider.GetComponent<BulletScript>();
             TakeDamage();
+        }
+    }
+
+    private void SpawnCoins() {
+        const int numCoins = 10;
+        const float spawnRadius = 2.0f;
+
+        for (int i = 0; i < numCoins; i++) {
+            Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
+            Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0.0f);
+
+            GameObject coin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
         }
     }
 }

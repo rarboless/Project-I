@@ -13,14 +13,6 @@ public class FlameEnemy : Enemy {
     private float timeOfLastShot;
     private GameObject bullet;
 
-    void Start() {
-        target = GameObject.FindWithTag("Player").transform;
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-
-    }
-
     private void Update() {
         CheckDistance();
 
