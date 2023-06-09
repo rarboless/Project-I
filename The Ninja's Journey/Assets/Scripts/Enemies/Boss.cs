@@ -74,6 +74,7 @@ public class Boss : MonoBehaviour
 
     protected void Die() {
         Destroy(gameObject);
+        gm.AddEnemiesKilled(1);
         SpawnCoins();
         SpawnFinalObject();
     }
