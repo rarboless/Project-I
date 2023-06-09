@@ -16,7 +16,8 @@ public class Boss : MonoBehaviour
     private Animator animator;
 
     [Header("Estadístiques")]
-    [SerializeField] private float maxHealth;
+    [SerializeField] private float health;
+    [SerializeField] private float maxHealth = 11;
     [SerializeField] private float moveSpeed;
 
     [Header("SFX")]
@@ -25,16 +26,22 @@ public class Boss : MonoBehaviour
     [Header("Coin")]
     [SerializeField] private GameObject coinPrefab;
 
+    [SerializeField] HealthBar healthBar;
+
     private Rigidbody2D rb;
 
     private BulletScript bs;
+
+    private void Awake() {
+        healthBar = GetComponentInChildren<HealthBar>();
+    }
 
     void Start() {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-
+        healthBar.UpdateHealthBar(health, maxHealth);
     }
 
 
@@ -53,15 +60,20 @@ public class Boss : MonoBehaviour
     }
 
     private void TakeDamage() {
-        if (maxHealth > 0) {
-            maxHealth -= bs.damage;
+        if (health > 0) {
+            health -= bs.damage;
+            healthBar.UpdateHealthBar(health, maxHealth);
         }
-        if (maxHealth <= 0) {
-            Destroy(gameObject);
-            SpawnCoins();
+        if (health <= 0) {
+            Die();
         }
 
         SoundManager.Instance.PlaySound(hitSFX);
+    }
+
+    protected void Die() {
+        Destroy(gameObject);
+        SpawnCoins();
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {

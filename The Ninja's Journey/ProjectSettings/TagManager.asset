@@ -18,6 +18,7 @@ TagManager:
   - AllHeal
   - Kunai
   - Tree
+  - Coin
   layers:
   - Default
   - TransparentFX
