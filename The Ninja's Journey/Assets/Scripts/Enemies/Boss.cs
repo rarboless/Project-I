@@ -23,10 +23,11 @@ public class Boss : MonoBehaviour
     [Header("SFX")]
     public AudioClip hitSFX;
 
-    [Header("Coin")]
+    [Header("Prefabs")]
     [SerializeField] private GameObject coinPrefab;
 
     [SerializeField] HealthBar healthBar;
+    [SerializeField] GameObject Final;
 
     private Rigidbody2D rb;
 
@@ -74,6 +75,7 @@ public class Boss : MonoBehaviour
     protected void Die() {
         Destroy(gameObject);
         SpawnCoins();
+        SpawnFinalObject();
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -93,5 +95,9 @@ public class Boss : MonoBehaviour
 
             GameObject coin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
         }
+    }
+
+    private void SpawnFinalObject() {
+        Final.SetActive(true);
     }
 }

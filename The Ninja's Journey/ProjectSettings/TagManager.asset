@@ -19,6 +19,7 @@ TagManager:
   - Kunai
   - Tree
   - Coin
+  - Final
   layers:
   - Default
   - TransparentFX

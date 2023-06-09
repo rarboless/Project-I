@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameMaster : MonoBehaviour
@@ -11,6 +12,7 @@ public class GameMaster : MonoBehaviour
     public int currentWeapon;
 
     public int enemiesKilled;
+    public float time;
 
 
     void Awake() {
@@ -26,6 +28,10 @@ public class GameMaster : MonoBehaviour
         } else {
             Destroy(gameObject);
         }
+    }
+    public void Update() {
+        time += Time.deltaTime;
+        Debug.Log(time);
     }
 
     public void AddPoints(int pointsToAdd) {
