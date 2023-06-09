@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a182b32b90b2a43b4da2055a00f26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 7
   attackRadius: 3
@@ -160,7 +161,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5954288518613201371, guid: 99a61442b3351cb418b14fe10e3067bc, type: 3}
   fireForce: 5
   weapon: {fileID: 1402800061663897876}
-  timeBetweenShots: 2
+  timeBetweenShots: 0.9
 --- !u!95 &6369818536944020041
 Animator:
   serializedVersion: 5
