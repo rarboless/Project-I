@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour {
 
     [Header("SFX")]
     public AudioClip hitSFX;
-    public Coin coin;
+    public AudioClip dieSFX;
 
     protected Rigidbody2D rb;
 
@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-        coin = GameObject.FindGameObjectWithTag("Coin").GetComponent<Coin>();
     }
 
     void Update() {
@@ -43,18 +42,17 @@ public class Enemy : MonoBehaviour {
     protected void TakeDamage() {
         if (maxHealth > 0) {
             maxHealth -= bs.damage;
+            SoundManager.Instance.PlaySound(hitSFX);
         }
         if (maxHealth <= 0) {
             Die();
         }
-
-        SoundManager.Instance.PlaySound(hitSFX);
     }
 
     protected void Die() {
         gm.AddPoints(pointsToAdd: 1);
         Destroy(gameObject);
-        SoundManager.Instance.PlaySound(coin.coinSFX);
+        SoundManager.Instance.PlaySound(dieSFX);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision) {
