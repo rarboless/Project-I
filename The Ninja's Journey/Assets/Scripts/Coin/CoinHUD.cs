@@ -7,6 +7,7 @@ using UnityEngine;
 public class CoinHUD : MonoBehaviour
 {
     public TextMeshProUGUI pointsHUD;
+    public TextMeshProUGUI pointsHUDFinal;
     public GameMaster gm;
     private int points;
 
@@ -16,7 +17,8 @@ public class CoinHUD : MonoBehaviour
     }
     public void Update() {
         this.points = gm.points;
-        pointsHUD.text = this.points.ToString(); 
+        pointsHUD.text = this.points.ToString();
+        pointsHUDFinal.text = this.points.ToString(); 
         //pointsHUD.text = gmScript.TotalPoints.ToString(); 
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameMaster : MonoBehaviour
@@ -10,11 +11,16 @@ public class GameMaster : MonoBehaviour
     public int health;
     public int currentWeapon;
 
+    public int enemiesKilled;
+    public float time;
+
 
     void Awake() {
         health = 3;
         points = 0;
         currentWeapon = 0;
+
+        enemiesKilled = 0;
 
         if (instance == null) {
             instance = this;
@@ -23,9 +29,19 @@ public class GameMaster : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void Update() {
+        time += Time.deltaTime;
+        Debug.Log(time);
+    }
 
     public void AddPoints(int pointsToAdd) {
         points += pointsToAdd;
         Debug.Log("Points: " + points);
     }
+
+    public void AddEnemiesKilled(int number) {
+        enemiesKilled += number;
+        Debug.Log("Enemies Killed: " + enemiesKilled);
+    }
+
 }
