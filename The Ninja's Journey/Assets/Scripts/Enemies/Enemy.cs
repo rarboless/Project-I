@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour {
     }
 
     protected void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag("Bullet")) {
+        if (collision.collider.CompareTag("Bullet") || collision.collider.CompareTag("KunaiBullet")) {
             bs = collision.collider.GetComponent<BulletScript>();
             TakeDamage();
         }

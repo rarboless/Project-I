@@ -162,9 +162,6 @@ public class Ninja : MonoBehaviour {
             SoundManager.Instance.PlaySound(pickWeaponSFX);
         }
         if (collision.CompareTag("Bow")) {
-            //Manera bona pero no funciona (Script amb Path dels archis)
-            //weapon1.GetComponent<SpriteRenderer>().sprite = bowScript.weaponSprite;
-            //bulletPrefab = bowScript.arrowPrefab;
             gm.currentWeapon = 0;
             Destroy(collision.gameObject);
             SoundManager.Instance.PlaySound(pickWeaponSFX);
