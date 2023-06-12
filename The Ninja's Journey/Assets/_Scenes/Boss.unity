@@ -360,11 +360,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.727174
+      value: -10.87
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.73042
+      value: 8.57
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4293,11 +4293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.69091
+      value: -10.73
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06339884
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4489,11 +4489,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4688536225209401473, guid: 807c86ce0b82362409d861012e33439d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7631364
+      value: 7.62
       objectReference: {fileID: 0}
     - target: {fileID: 4688536225209401473, guid: 807c86ce0b82362409d861012e33439d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.544697
+      value: 8.41
       objectReference: {fileID: 0}
     - target: {fileID: 4688536225209401473, guid: 807c86ce0b82362409d861012e33439d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4778,8 +4778,8 @@ MonoBehaviour:
   target: {fileID: 0}
   chaseRadius: 20
   attackRadius: 10
-  health: 25
-  maxHealth: 25
+  health: 60
+  maxHealth: 60
   moveSpeed: 2
   hitSFX: {fileID: 8300000, guid: ccfdbc5e98847ff4891a2a1a5773fcff, type: 3}
   coinPrefab: {fileID: 4072217058876851300, guid: ce538d319870b9a44829c01c606c48c0, type: 3}
@@ -18663,7 +18663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25806284
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 93627318086461606, guid: 1f15c3f9f5b9ade4ba16eeea713bb64e, type: 3}
       propertyPath: m_LocalPosition.y
