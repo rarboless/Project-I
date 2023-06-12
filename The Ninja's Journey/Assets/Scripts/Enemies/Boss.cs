@@ -102,7 +102,7 @@ public class Boss : MonoBehaviour
         SoundManager.Instance.PlaySound(hitSFX);
     }
 
-    protected void Die() {
+    private void Die() {
         Destroy(gameObject);
         gm.AddEnemiesKilled(1);
         SpawnCoins();
@@ -110,7 +110,7 @@ public class Boss : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag("Bullet")) {
+        if (collision.collider.CompareTag("Bullet") || collision.collider.CompareTag("KunaiBullet")) {
             bs = collision.collider.GetComponent<BulletScript>();
             TakeDamage();
         }

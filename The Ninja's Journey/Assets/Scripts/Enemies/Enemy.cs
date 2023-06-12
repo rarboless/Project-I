@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour {
     public GameMaster gm;
 
     [Header("Propietats principals")]
-    [SerializeField] public Transform target; //public -> Health
+    [SerializeField] public Transform target; 
     [SerializeField] protected float chaseRadius;
     [SerializeField] protected float attackRadius;
     [SerializeField] public Transform homePosition;
