@@ -116,17 +116,18 @@ public class Ninja : MonoBehaviour {
 
     void ShootKunai() {
         Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mousePosition.y - rigidBody.position.y, mousePosition.x - rigidBody.position.x) * Mathf.Rad2Deg);
+        StartCoroutine(ShootBulletsWithDelay(rotation));
+    }
 
-        Vector3 secondaryBullets = new Vector3(0, 45, 90);
-
-        for(int i = 0; i<3; i++) {
+    IEnumerator ShootBulletsWithDelay(Quaternion rotation) {
+        for (int i = 0; i < 3; i++) {
             bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
             bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
+            SoundManager.Instance.PlaySound(bulletSFX);
+            Destroy(bullet, 5f);
+
+            yield return new WaitForSeconds(0.05f);
         }
-
-        SoundManager.Instance.PlaySound(bulletSFX);
-
-        Destroy(bullet, 5f);
     }
 
     public void Die() {
