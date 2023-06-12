@@ -116,7 +116,7 @@ public class Ninja : MonoBehaviour {
     void ShootKunai() {
         Quaternion rotation = Quaternion.Euler(0, 0, Mathf.Atan2(mousePosition.y - rigidBody.position.y, mousePosition.x - rigidBody.position.x) * Mathf.Rad2Deg);
 
-        Vector3 secondaryBullets = new Vector3(0, 0, 90);
+        Vector3 secondaryBullets = new Vector3(0, 45, 90);
 
         bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
