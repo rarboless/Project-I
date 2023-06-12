@@ -4986,8 +4986,7 @@ MonoBehaviour:
   chaseRadius: 6
   attackRadius: 0
   homePosition: {fileID: 0}
-  maxHealth: 5
+  maxHealth: 6
   moveSpeed: 3
   hitSFX: {fileID: 8300000, guid: ccfdbc5e98847ff4891a2a1a5773fcff, type: 3}
   dieSFX: {fileID: 8300000, guid: 84441e054493b1441846c3f736dcf1d7, type: 3}
-  coin: {fileID: 0}

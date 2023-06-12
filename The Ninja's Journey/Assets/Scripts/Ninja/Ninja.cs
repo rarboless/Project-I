@@ -67,6 +67,7 @@ public class Ninja : MonoBehaviour {
             if (Time.time - timeOfLastShot >= timeBetweenShots) {
                 if (gm.currentWeapon == 2) {
                     ShootKunai();
+               
                 }
                 else {
                     Shoot();
@@ -118,12 +119,10 @@ public class Ninja : MonoBehaviour {
 
         Vector3 secondaryBullets = new Vector3(0, 45, 90);
 
-        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
-        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position + secondaryBullets , rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
-        bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position - secondaryBullets, rotation);
-        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
+        for(int i = 0; i<3; i++) {
+            bullet = Instantiate(bulletPrefab, firePoint.GetComponent<UnityEngine.Transform>().position, rotation);
+            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.GetComponent<UnityEngine.Transform>().up * fireForce, ForceMode2D.Impulse);
+        }
 
         SoundManager.Instance.PlaySound(bulletSFX);
 
