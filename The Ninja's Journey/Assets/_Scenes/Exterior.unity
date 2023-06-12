@@ -1048,7 +1048,7 @@ PrefabInstance:
     - target: {fileID: 2606944940333449816, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: connection
       value: 
-      objectReference: {fileID: 11400000, guid: ada671c4131f0484081aa2b77dac16ee, type: 2}
+      objectReference: {fileID: 11400000, guid: 837215fbc50123e4a9e716ed7c4b616c, type: 2}
     - target: {fileID: 2606944940333449816, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -12176,11 +12176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.9065933
+      value: -5.906593
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.4707987
+      value: 2.4708111
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798147, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: field of view
@@ -29283,6 +29283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsHUD: {fileID: 109275975}
+  pointsHUDFinal: {fileID: 0}
   gm: {fileID: 0}
 --- !u!114 &2020561148
 MonoBehaviour:
