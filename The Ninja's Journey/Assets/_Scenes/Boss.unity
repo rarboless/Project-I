@@ -20003,7 +20003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsHUD: {fileID: 1803006425}
-  pointsHUDFinal: {fileID: 1187856377}
   gm: {fileID: 0}
 --- !u!114 &2013853375 stripped
 MonoBehaviour:
@@ -20035,6 +20034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemiesKilledHUD: {fileID: 1430080142}
   timeHUD: {fileID: 1852037247}
+  pointsHUDFinal: {fileID: 1187856377}
   gm: {fileID: 790893794}
 --- !u!1 &2031390428
 GameObject:
