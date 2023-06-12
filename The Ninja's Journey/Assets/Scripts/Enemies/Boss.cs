@@ -60,6 +60,11 @@ public class Boss : MonoBehaviour
 
         target = GameObject.FindWithTag("Player").transform;
 
+        if (Vector2.Distance(target.position, transform.position) <= chaseRadius) {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            Vector2 temp = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            rb.MovePosition(temp);
+        }
 
         if (Vector2.Distance(target.position, transform.position) <= attackRadius && canDash) {
             StartCoroutine(PerformDash());
@@ -67,20 +72,24 @@ public class Boss : MonoBehaviour
 
     }
     private IEnumerator PerformDash() {
-        canDash = false; 
+        canDash = false;
         Vector2 dashDirection = (target.position - transform.position).normalized;
-        float dashDuration = 0.5f; // Duración del dash
+        float dashDuration = 0.5f; 
+        float dashSpeed = moveSpeed * 4.0f;
 
-        rb.velocity = dashDirection * moveSpeed * 4.0f; 
+        float dashTimer = 0f;
 
-        yield return new WaitForSeconds(dashDuration);
-
-        rb.velocity = Vector2.zero;
+        while (dashTimer < dashDuration) {
+            transform.position += (Vector3)dashDirection * dashSpeed * Time.deltaTime;
+            dashTimer += Time.deltaTime;
+            yield return null;
+        }
 
         yield return new WaitForSeconds(dashCooldown);
 
-        canDash = true; // Permitir que el enemigo haga otro dash después del cooldown
+        canDash = true; 
     }
+    
     private void TakeDamage() {
         if (health > 0) {
             health -= bs.damage;
