@@ -36,12 +36,10 @@ public class GameMaster : MonoBehaviour
 
     public void AddPoints(int pointsToAdd) {
         points += pointsToAdd;
-        Debug.Log("Points: " + points);
     }
 
     public void AddEnemiesKilled(int number) {
         enemiesKilled += number;
-        Debug.Log("Enemies Killed: " + enemiesKilled);
     }
 
 }

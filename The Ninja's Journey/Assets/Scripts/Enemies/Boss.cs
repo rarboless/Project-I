@@ -34,6 +34,10 @@ public class Boss : MonoBehaviour
 
     private BulletScript bs;
 
+    private bool canDash = true; // Variable para controlar si el enemigo puede hacer un dash
+    private float dashCooldown = 5.0f; // Tiempo de espera entre dashes
+
+
     private void Awake() {
         healthBar = GetComponentInChildren<HealthBar>();
     }
@@ -53,15 +57,30 @@ public class Boss : MonoBehaviour
     }
 
     void Movement() {
+
         target = GameObject.FindWithTag("Player").transform;
 
-        if (Vector2.Distance(target.position, transform.position) <= chaseRadius && Vector3.Distance(target.position, transform.position) > attackRadius) {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            Vector2 temp = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            rb.MovePosition(temp);
-        }
-    }
 
+        if (Vector2.Distance(target.position, transform.position) <= attackRadius && canDash) {
+            StartCoroutine(PerformDash());
+        }
+
+    }
+    private IEnumerator PerformDash() {
+        canDash = false; 
+        Vector2 dashDirection = (target.position - transform.position).normalized;
+        float dashDuration = 0.5f; // Duración del dash
+
+        rb.velocity = dashDirection * moveSpeed * 4.0f; 
+
+        yield return new WaitForSeconds(dashDuration);
+
+        rb.velocity = Vector2.zero;
+
+        yield return new WaitForSeconds(dashCooldown);
+
+        canDash = true; // Permitir que el enemigo haga otro dash después del cooldown
+    }
     private void TakeDamage() {
         if (health > 0) {
             health -= bs.damage;
