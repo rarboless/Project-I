@@ -20,6 +20,7 @@ public class GameMaster : MonoBehaviour
         points = 0;
         currentWeapon = 0;
 
+        time = 0;
         enemiesKilled = 0;
 
         if (instance == null) {

@@ -29,6 +29,9 @@ public class MainMenu : MonoBehaviour {
         gm.points = 0;
         gm.health = 3;
         gm.currentWeapon = 0;
+
+        gm.time = 0;
+        gm.enemiesKilled = 0;
         
         SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
     }
