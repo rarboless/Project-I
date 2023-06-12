@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   fireForce: 200
-  timeBetweenShots: 1.5
+  timeBetweenShots: 4
 --- !u!50 &7275737658662229175
 Rigidbody2D:
   serializedVersion: 4
