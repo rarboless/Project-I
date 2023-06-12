@@ -34,8 +34,8 @@ public class Boss : MonoBehaviour
 
     private BulletScript bs;
 
-    private bool canDash = true; // Variable para controlar si el enemigo puede hacer un dash
-    private float dashCooldown = 5.0f; // Tiempo de espera entre dashes
+    private bool canDash = true; 
+    private float dashCooldown = 5.0f;
 
 
     private void Awake() {
