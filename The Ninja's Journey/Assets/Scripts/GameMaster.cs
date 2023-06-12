@@ -32,7 +32,6 @@ public class GameMaster : MonoBehaviour
     }
     public void Update() {
         time += Time.deltaTime;
-        Debug.Log(time);
     }
 
     public void AddPoints(int pointsToAdd) {

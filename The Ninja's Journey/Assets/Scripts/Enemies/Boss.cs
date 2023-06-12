@@ -44,7 +44,6 @@ public class Boss : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         healthBar.UpdateHealthBar(health, maxHealth);
-
         StartCoroutine(SpawnSkullsCoroutine());
     }
 
@@ -100,25 +99,26 @@ public class Boss : MonoBehaviour
             GameObject coin = Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
         }
     }
+
     private IEnumerator SpawnSkullsCoroutine() {
-        const float spawnInterval = 5.0f;
+        const float spawnInterval = 3.0f;
 
         while (true) {
             yield return new WaitForSeconds(spawnInterval);
 
-            SpawnSkulls();
+            SpawnSkull();
         }
     }
 
-    private void SpawnSkulls() {
-        //spawn skulls every 5 seconds 
-        const float spawnRadius = 3.0f;
+    private void SpawnSkull() {
+        float spawnRadius = 3.0f;
+
         Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
         Vector3 spawnPosition = transform.position + new Vector3(randomOffset.x, randomOffset.y, 0.0f);
 
         GameObject skull = Instantiate(skullPrefab, spawnPosition, Quaternion.identity);
-
-
+        Enemy skullEnemy = skull.GetComponent<Enemy>();
+        skullEnemy.homePosition = target;
     }
 
     private void SpawnFinalObject() {

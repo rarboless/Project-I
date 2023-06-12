@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField] public Transform target; //public -> Health
     [SerializeField] protected float chaseRadius;
     [SerializeField] protected float attackRadius;
-    [SerializeField] protected Transform homePosition;
+    [SerializeField] public Transform homePosition;
 
     [Header("Moviment")]
     protected Vector3 movement;
