@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class GameMasterHUD : MonoBehaviour
-{
+public class GameMasterHUD : MonoBehaviour {
     public TextMeshProUGUI enemiesKilledHUD;
     public TextMeshProUGUI timeHUD;
     public TextMeshProUGUI pointsHUDFinal;
@@ -15,17 +14,14 @@ public class GameMasterHUD : MonoBehaviour
     private float time;
     private int points;
 
-    void Start()
-    {
+    void Start() {
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
     }
 
-    void Update()
-    {
+    void Update() {
         this.enemiesKilled = gm.enemiesKilled;
         this.time = gm.time;
         this.time = (float) (Math.Round(time, 1));
-
 
         enemiesKilledHUD.text = this.enemiesKilled.ToString();
         this.points = gm.points;
