@@ -18865,11 +18865,15 @@ PrefabInstance:
     - target: {fileID: 2606944940333449816, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: connection
       value: 
-      objectReference: {fileID: 11400000, guid: 36b3e7e262cb8ec469cc1a1efd2ca896, type: 2}
+      objectReference: {fileID: 11400000, guid: ded9ee10f4c2a2740a0bc819786ad450, type: 2}
     - target: {fileID: 2606944940333449816, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1597851621}
+    - target: {fileID: 2606944940333449816, guid: ef624586bd7f6954b97da76f96395978, type: 3}
+      propertyPath: sceneBuildIndex
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2606944940333449817, guid: ef624586bd7f6954b97da76f96395978, type: 3}
       propertyPath: m_Size.x
       value: 1.8130269
@@ -19105,7 +19109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.054241
+      value: -5.0542545
       objectReference: {fileID: 0}
     - target: {fileID: 3873141255340798144, guid: 293cb78c4a1c9b8479437bb0c43cbfe1, type: 3}
       propertyPath: m_LocalPosition.z

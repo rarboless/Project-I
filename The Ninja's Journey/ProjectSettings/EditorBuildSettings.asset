@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/DungeonF3.unity
     guid: 73145d7ee1076f34ba9d5d29353f5330
+  - enabled: 1
+    path: Assets/_Scenes/PreBossArea.unity
+    guid: 986e9bc2f991ed1488f8a174413ded23
   m_configObjects: {}
