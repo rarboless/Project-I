@@ -5,7 +5,6 @@ using Cinemachine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using UnityEngine.SceneManagement;
 using UnityEditor;
-using UnityEditor.Timeline.Actions;
 
 public class Ninja : MonoBehaviour {
     [Header("Movement Ninja")]
